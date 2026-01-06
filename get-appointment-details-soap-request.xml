@@ -1,0 +1,37 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.kareo.com/api/schemas/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <sch:GetAppointment>
+      <sch:request>
+        <sch:RequestHeader>
+          <sch:CustomerKey>{{ $('Config').item.json.tebraCustomerKey }}</sch:CustomerKey>
+          <sch:Password>{{ $('Config').item.json.tebraPassword }}</sch:Password>
+          <sch:User>{{ $('Config').item.json.tebraUser }}</sch:User>
+        </sch:RequestHeader>
+        <sch:Fields>
+          <sch:ID>true</sch:ID>
+          <sch:PatientFullName>true</sch:PatientFullName>
+          <sch:PatientID>true</sch:PatientID>
+          <sch:StartDate>true</sch:StartDate>
+          <sch:EndDate>true</sch:EndDate>
+          <sch:Type>true</sch:Type>
+          <sch:Notes>true</sch:Notes>
+          <sch:ResourceName1>true</sch:ResourceName1>
+          <sch:ResourceID1>true</sch:ResourceID1>
+          <sch:Duration>true</sch:Duration>
+          <sch:AppointmentLength>true</sch:AppointmentLength>
+          <sch:Minutes>true</sch:Minutes>
+          <sch:ServiceLocationName>true</sch:ServiceLocationName>
+          <sch:CaseID>true</sch:CaseID>
+          <sch:AppointmentStatus>true</sch:AppointmentStatus>
+          <sch:ConfirmedDate>true</sch:ConfirmedDate>
+          <sch:CreatedDate>true</sch:CreatedDate>
+          <sch:ModifiedDate>true</sch:ModifiedDate>
+        </sch:Fields>
+        <sch:Appointment>
+          <sch:AppointmentId>{{ $json.appointmentId }}</sch:AppointmentId>
+        </sch:Appointment>
+      </sch:request>
+    </sch:GetAppointment>
+  </soapenv:Body>
+</soapenv:Envelope>
