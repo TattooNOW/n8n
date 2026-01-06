@@ -1,1 +1,586 @@
-
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 2
+            }
+          ]
+        }
+      },
+      "id": "a226e9c3-ed74-4fac-8727-58bc38d7a090",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        8112,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "config_1",
+              "name": "tebraCustomerKey",
+              "value": "d38wg42is65m",
+              "type": "string"
+            },
+            {
+              "id": "config_2",
+              "name": "tebraPassword",
+              "value": "Radiance123*",
+              "type": "string"
+            },
+            {
+              "id": "config_3",
+              "name": "tebraUser",
+              "value": "sherif@theradiancemd.com",
+              "type": "string"
+            },
+            {
+              "id": "config_4",
+              "name": "tebraPracticeName",
+              "value": "The Radiance MD",
+              "type": "string"
+            },
+            {
+              "id": "config_5",
+              "name": "highlevelApiKey",
+              "value": "pit-d96fb773-2359-4b8d-bd0c-0fa616b0046f",
+              "type": "string"
+            },
+            {
+              "id": "config_6",
+              "name": "highlevelLocationId",
+              "value": "5VLZDjBR5Pn80YH59C6L",
+              "type": "string"
+            },
+            {
+              "id": "config_7",
+              "name": "highlevelCalendarId",
+              "value": "YOUR_HIGHLEVEL_CALENDAR_ID",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d0430730-6318-4520-8018-7c723fafb880",
+      "name": "Config",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        8336,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare date range for SOAP request\nconst now = new Date();\nconst twoHoursAgo = new Date(now.getTime() - (2 * 60 * 60 * 1000));\n\n// Format dates as MM/DD/YYYY HH:mm:ss AM/PM (Tebra format)\nfunction formatTebraDate(date) {\n  const month = String(date.getMonth() + 1).padStart(2, '0');\n  const day = String(date.getDate()).padStart(2, '0');\n  const year = date.getFullYear();\n  \n  let hours = date.getHours();\n  const minutes = String(date.getMinutes()).padStart(2, '0');\n  const seconds = String(date.getSeconds()).padStart(2, '0');\n  const ampm = hours >= 12 ? 'PM' : 'AM';\n  \n  hours = hours % 12;\n  hours = hours ? hours : 12;\n  hours = String(hours).padStart(2, '0');\n  \n  return `${month}/${day}/${year} ${hours}:${minutes}:${seconds} ${ampm}`;\n}\n\nconst configData = $input.first().json;\n\nreturn [{\n  json: {\n    ...configData,\n    startDate: formatTebraDate(twoHoursAgo),\n    endDate: formatTebraDate(now)\n  }\n}];"
+      },
+      "id": "8dd1462e-a4dd-47c2-87a9-8bf19573f822",
+      "name": "Prepare Date Range",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        8560,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webservice.kareo.com/services/soap/2.1/KareoServices.svc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "text/xml; charset=utf-8"
+            },
+            {
+              "name": "SOAPAction",
+              "value": "http://www.kareo.com/api/schemas/KareoServices/GetAppointments"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "text/xml",
+        "body": "=<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://www.kareo.com/api/schemas/\">\n  <s:Body>\n    <tem:GetAppointments>\n      <tem:request>\n        <tem:RequestHeader>\n          <tem:CustomerKey>{{ $json.tebraCustomerKey }}</tem:CustomerKey>\n          <tem:Password>{{ $json.tebraPassword }}</tem:Password>\n          <tem:User>{{ $json.tebraUser }}</tem:User>\n        </tem:RequestHeader>\n        <tem:Fields>\n          <tem:ID>true</tem:ID>\n          <tem:PatientFullName>true</tem:PatientFullName>\n          <tem:PatientID>true</tem:PatientID>\n          <tem:StartDate>true</tem:StartDate>\n          <tem:EndDate>true</tem:EndDate>\n          <tem:Type>true</tem:Type>\n          <tem:Notes>true</tem:Notes>\n          <tem:ResourceName1>true</tem:ResourceName1>\n          <tem:ResourceID1>true</tem:ResourceID1>\n          <tem:Duration>true</tem:Duration>\n          <tem:AppointmentLength>true</tem:AppointmentLength>\n          <tem:Minutes>true</tem:Minutes>\n          <tem:ServiceLocationName>true</tem:ServiceLocationName>\n          <tem:CaseID>true</tem:CaseID>\n        </tem:Fields>\n        <tem:Filter>\n          <tem:PracticeName>{{ $json.tebraPracticeName }}</tem:PracticeName>\n          <tem:StartDate>{{ $json.startDate }}</tem:StartDate>\n          <tem:EndDate>{{ $json.endDate }}</tem:EndDate>\n        </tem:Filter>\n      </tem:request>\n    </tem:GetAppointments>\n  </s:Body>\n</s:Envelope>",
+        "options": {}
+      },
+      "id": "26a1c12e-e46a-4fae-97d3-e7afe9031571",
+      "name": "Get Tebra Appointments",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        8784,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse SOAP XML response and extract appointments\nconst xmlResponse = $input.first().json.data || $input.first().json;\n\n// Helper function to extract XML tag content\nfunction getTagContent(xml, tagName) {\n  const regex = new RegExp(`<${tagName}[^>]*>([\\\\s\\\\S]*?)<\\\\/${tagName}>`, 'i');\n  const match = xml.match(regex);\n  return match ? match[1].trim() : null;\n}\n\n// Helper function to get all occurrences of a tag\nfunction getAllTags(xml, tagName) {\n  const regex = new RegExp(`<${tagName}[^>]*>([\\\\s\\\\S]*?)<\\\\/${tagName}>`, 'gi');\n  const matches = [];\n  let match;\n  while ((match = regex.exec(xml)) !== null) {\n    matches.push(match[1]);\n  }\n  return matches;\n}\n\n// Check for SOAP Fault\nif (xmlResponse.includes('<s:Fault>') || xmlResponse.includes('<Fault>')) {\n  const faultString = getTagContent(xmlResponse, 'faultstring');\n  throw new Error(`SOAP Fault: ${faultString}`);\n}\n\n// Check authentication\nconst authenticated = getTagContent(xmlResponse, 'Authenticated');\nif (authenticated === 'false') {\n  const securityResult = getTagContent(xmlResponse, 'SecurityResult');\n  throw new Error(`Authentication Failed: ${securityResult}`);\n}\n\n// Check for API errors\nconst isError = getTagContent(xmlResponse, 'IsError');\nif (isError === 'true') {\n  const errorMessage = getTagContent(xmlResponse, 'ErrorMessage');\n  throw new Error(`Tebra API Error: ${errorMessage}`);\n}\n\n// Extract appointment blocks\nconst appointmentBlocks = getAllTags(xmlResponse, 'AppointmentData');\n\nif (appointmentBlocks.length === 0) {\n  return [{ json: { message: 'No new appointments found', count: 0 } }];\n}\n\n// Parse each appointment\nconst appointments = appointmentBlocks.map(block => {\n  return {\n    json: {\n      appointmentId: getTagContent(block, 'ID'),\n      patientFullName: getTagContent(block, 'PatientFullName'),\n      patientId: getTagContent(block, 'PatientID'),\n      startDate: getTagContent(block, 'StartDate'),\n      endDate: getTagContent(block, 'EndDate'),\n      appointmentType: getTagContent(block, 'Type'),\n      notes: getTagContent(block, 'Notes'),\n      resourceName: getTagContent(block, 'ResourceName1'),\n      resourceId: getTagContent(block, 'ResourceID1')\n    }\n  };\n});\n\nreturn appointments;"
+      },
+      "id": "de484f93-b88d-4695-a8e2-ffd1de11a6e3",
+      "name": "Parse SOAP and Extract Appointments",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9008,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "filter_1",
+              "leftValue": "={{ $json.patientFullName }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists"
+              }
+            },
+            {
+              "id": "filter_2",
+              "leftValue": "={{ $json.patientFullName }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e910e04e-0b34-4b65-959a-33eddd43b5a7",
+      "name": "Filter Valid Appointments",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        9232,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://webservice.kareo.com/services/soap/2.1/KareoServices.svc",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "text/xml; charset=utf-8"
+            },
+            {
+              "name": "SOAPAction",
+              "value": "http://www.kareo.com/api/schemas/KareoServices/GetAppointment"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "text/xml",
+        "body": "=<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:sch=\"http://www.kareo.com/api/schemas/\">\n  <soapenv:Header/>\n  <soapenv:Body>\n    <sch:GetAppointment>\n      <sch:request>\n        <sch:RequestHeader>\n          <sch:CustomerKey>{{ $('Config').item.json.tebraCustomerKey }}</sch:CustomerKey>\n          <sch:Password>{{ $('Config').item.json.tebraPassword }}</sch:Password>\n          <sch:User>{{ $('Config').item.json.tebraUser }}</sch:User>\n        </sch:RequestHeader>\n        <sch:Fields>\n          <sch:ID>true</sch:ID>\n          <sch:PatientFullName>true</sch:PatientFullName>\n          <sch:PatientID>true</sch:PatientID>\n          <sch:StartDate>true</sch:StartDate>\n          <sch:EndDate>true</sch:EndDate>\n          <sch:Type>true</sch:Type>\n          <sch:Notes>true</sch:Notes>\n          <sch:ResourceName1>true</sch:ResourceName1>\n          <sch:ResourceID1>true</sch:ResourceID1>\n          <sch:Duration>true</sch:Duration>\n          <sch:AppointmentLength>true</sch:AppointmentLength>\n          <sch:Minutes>true</sch:Minutes>\n          <sch:ServiceLocationName>true</sch:ServiceLocationName>\n          <sch:CaseID>true</sch:CaseID>\n          <sch:AppointmentStatus>true</sch:AppointmentStatus>\n          <sch:ConfirmedDate>true</sch:ConfirmedDate>\n          <sch:CreatedDate>true</sch:CreatedDate>\n          <sch:ModifiedDate>true</sch:ModifiedDate>\n        </sch:Fields>\n        <sch:Appointment>\n          <sch:AppointmentId>{{ $json.appointmentId }}</sch:AppointmentId>\n        </sch:Appointment>\n      </sch:request>\n    </sch:GetAppointment>\n  </soapenv:Body>\n</soapenv:Envelope>",
+        "options": {}
+      },
+      "id": "2a126cd4-cd9d-46a0-abd6-9427ad0c23b6",
+      "name": "Get Appointment Details",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        9456,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse detailed appointment SOAP response for EACH item\nconst item = $input.item;\nconst xmlResponse = item.json.data || item.json;\n\n// Helper function to extract XML tag content (handles namespaces)\nfunction getTagContent(xml, tagName) {\n  // Try with namespace prefix first (a:TagName, tem:TagName, etc.)\n  const regexWithNS = new RegExp(`<[a-zA-Z]+:${tagName}[^>]*>([\\\\s\\\\S]*?)</[a-zA-Z]+:${tagName}>`, 'i');\n  const matchWithNS = xml.match(regexWithNS);\n  if (matchWithNS) return matchWithNS[1].trim();\n\n  // Try without namespace\n  const regex = new RegExp(`<${tagName}[^>]*>([\\\\s\\\\S]*?)<\\\\/${tagName}>`, 'i');\n  const match = xml.match(regex);\n  return match ? match[1].trim() : null;\n}\n\n// Debug: Log the XML response (first 1000 chars)\nconsole.log('XML Response Preview:', xmlResponse.substring(0, 1000));\n\n// Check for errors\nconst isError = getTagContent(xmlResponse, 'IsError');\nif (isError === 'true') {\n  const errorMessage = getTagContent(xmlResponse, 'ErrorMessage');\n  throw new Error(`Tebra API Error: ${errorMessage}`);\n}\n\n// Extract appointment details - try both \"Appointment\" and \"AppointmentData\"\nlet appointmentBlock = getTagContent(xmlResponse, 'Appointment');\nif (!appointmentBlock) {\n  appointmentBlock = getTagContent(xmlResponse, 'AppointmentData');\n}\n\nif (!appointmentBlock) {\n  console.log('No appointment block found in response');\n  return [];\n}\n\n// Debug: Log found appointment block (first 500 chars)\nconsole.log('Appointment Block Preview:', appointmentBlock.substring(0, 500));\n\n// Parse all available fields from the detailed response\nconst details = {\n  appointmentId: getTagContent(appointmentBlock, 'ID'),\n  patientFullName: getTagContent(appointmentBlock, 'PatientFullName'),\n  patientId: getTagContent(appointmentBlock, 'PatientID'),\n  startDate: getTagContent(appointmentBlock, 'StartDate'),\n  endDate: getTagContent(appointmentBlock, 'EndDate'),\n  appointmentType: getTagContent(appointmentBlock, 'Type'),\n  notes: getTagContent(appointmentBlock, 'Notes'),\n  resourceName: getTagContent(appointmentBlock, 'ResourceName1'),\n  resourceId: getTagContent(appointmentBlock, 'ResourceID1'),\n  duration: getTagContent(appointmentBlock, 'Duration'),\n  appointmentLength: getTagContent(appointmentBlock, 'AppointmentLength'),\n  minutes: getTagContent(appointmentBlock, 'Minutes'),\n  serviceLocationName: getTagContent(appointmentBlock, 'ServiceLocationName'),\n  caseId: getTagContent(appointmentBlock, 'CaseID'),\n  status: getTagContent(appointmentBlock, 'AppointmentStatus'),\n  confirmedDate: getTagContent(appointmentBlock, 'ConfirmedDate'),\n  createdDate: getTagContent(appointmentBlock, 'CreatedDate'),\n  modifiedDate: getTagContent(appointmentBlock, 'ModifiedDate')\n};\n\n// Debug: Log which fields are null\nconst nullFields = Object.entries(details)\n  .filter(([key, value]) => value === null)\n  .map(([key]) => key);\n\nif (nullFields.length > 0) {\n  console.log('Fields returning null:', nullFields.join(', '));\n}\n\n// Debug: Log which fields have values\nconst populatedFields = Object.entries(details)\n  .filter(([key, value]) => value !== null)\n  .map(([key, value]) => `${key}: ${value}`);\n\nconsole.log('Populated fields:', populatedFields.join(', '));\n\nreturn { json: details };"
+      },
+      "id": "b47658e9-f34e-4f7a-8805-454bd7bb31c5",
+      "name": "Parse Appointment Details",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9680,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "filter_startdate",
+              "leftValue": "={{ $json.startDate }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists"
+              }
+            },
+            {
+              "id": "filter_patientname",
+              "leftValue": "={{ $json.patientFullName }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists"
+              }
+            },
+            {
+              "id": "filter_status",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "Rescheduled",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            },
+            {
+              "id": "filter_cancelled",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "Cancelled",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "67456317-9032-40e7-a9e8-0cf7889d3337",
+      "name": "Filter Valid Appointment Details",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        9904,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://services.leadconnectorhq.com/users/?locationId={{ $('Config').item.json.highlevelLocationId }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $('Config').item.json.highlevelApiKey }}"
+            },
+            {
+              "name": "Version",
+              "value": "2021-07-28"
+            },
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7f5aeaef-6835-488b-91e6-33fd372d905a",
+      "name": "Get HighLevel Users",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        10128,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Match Tebra resource to HighLevel user\nconst items = $input.all();\nconst appointmentData = items[0].json;\nconst usersResponse = items[1].json;\n\nconst users = usersResponse.users || [];\nconst resourceName = appointmentData.resourceName || '';\n\n// Try to match by resource name\nlet assignedUser = null;\n\nif (resourceName && users.length > 0) {\n  // Try exact match first\n  assignedUser = users.find(u => \n    u.name && u.name.toLowerCase() === resourceName.toLowerCase()\n  );\n  \n  // Try partial match\n  if (!assignedUser) {\n    assignedUser = users.find(u => \n      u.name && (\n        resourceName.toLowerCase().includes(u.name.toLowerCase()) ||\n        u.name.toLowerCase().includes(resourceName.toLowerCase())\n      )\n    );\n  }\n}\n\n// Default to first user if no match\nif (!assignedUser && users.length > 0) {\n  assignedUser = users[0];\n}\n\nreturn [{\n  json: {\n    ...appointmentData,\n    assignedUserId: assignedUser?.id || null,\n    assignedUserEmail: assignedUser?.email || null,\n    assignedUserName: assignedUser?.name || null\n  }\n}];"
+      },
+      "id": "7eb7d9bd-3602-4308-bf1c-39d27891b924",
+      "name": "Match User by Resource Name",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10352,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://services.leadconnectorhq.com/contacts/upsert",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $('Config').item.json.highlevelApiKey }}"
+            },
+            {
+              "name": "Version",
+              "value": "2021-07-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "body": "={{ {\n  \"locationId\": $('Config').item.json.highlevelLocationId,\n  \"firstName\": $json.patientFullName.split(' ')[0] || '',\n  \"lastName\": $json.patientFullName.split(' ').slice(1).join(' ') || '',\n  \"name\": $json.patientFullName,\n  \"source\": \"Tebra\",\n  \"customFields\": [\n    {\n      \"key\": \"tebra_patient_id\",\n      \"value\": $json.patientId\n    },\n    {\n      \"key\": \"tebra_appointment_id\",\n      \"value\": $json.appointmentId\n    }\n  ],\n  \"tags\": [\"Tebra Patient\"]\n} }}",
+        "options": {}
+      },
+      "id": "f667a54f-0e87-481e-a0c8-64b5c8b16c7d",
+      "name": "Create or Update HighLevel Contact",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        10576,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Transform to HighLevel appointment format\nconst items = $input.all();\nconst appointmentData = items[0].json;\nconst contactResponse = items[1].json;\nconst configNode = $('Config').item.json;\n\n// Get contact ID from response\nconst contactId = contactResponse.contact?.id || contactResponse.id;\n\nif (!contactId) {\n  throw new Error('Failed to get or create contact in HighLevel');\n}\n\n// Parse Tebra date format: M/D/YYYY H:mm:ss AM/PM to ISO\nfunction parseTebraDate(dateStr) {\n  if (!dateStr) return null;\n  \n  const parts = dateStr.match(/(\\d+)\\/(\\d+)\\/(\\d+)\\s+(\\d+):(\\d+):(\\d+)\\s+(AM|PM)/);\n  if (!parts) return null;\n  \n  const [, month, day, year, hour, minute, second, ampm] = parts;\n  let hours = parseInt(hour);\n  \n  if (ampm === 'PM' && hours !== 12) hours += 12;\n  if (ampm === 'AM' && hours === 12) hours = 0;\n  \n  const date = new Date(year, month - 1, day, hours, minute, second);\n  return date.toISOString();\n}\n\n// Calculate end time if not provided\nlet endTime = parseTebraDate(appointmentData.endDate);\n\nif (!endTime && appointmentData.startDate) {\n  // Try to get duration from various fields\n  let durationMinutes = 30; // default\n  \n  if (appointmentData.minutes) {\n    durationMinutes = parseInt(appointmentData.minutes);\n  } else if (appointmentData.duration) {\n    durationMinutes = parseInt(appointmentData.duration);\n  } else if (appointmentData.appointmentLength) {\n    durationMinutes = parseInt(appointmentData.appointmentLength);\n  }\n  \n  // Calculate end time\n  const startDate = new Date(parseTebraDate(appointmentData.startDate));\n  const endDate = new Date(startDate.getTime() + (durationMinutes * 60 * 1000));\n  endTime = endDate.toISOString();\n}\n\nreturn [{\n  json: {\n    calendarId: configNode.highlevelCalendarId,\n    locationId: configNode.highlevelLocationId,\n    contactId: contactId,\n    startTime: parseTebraDate(appointmentData.startDate),\n    endTime: endTime,\n    title: appointmentData.appointmentType || 'Appointment',\n    description: appointmentData.notes || '',\n    appointmentStatus: 'confirmed',\n    assignedUserId: appointmentData.assignedUserId,\n    toNotify: true,\n    tebraAppointmentId: appointmentData.appointmentId,\n    tebraPatientId: appointmentData.patientId\n  }\n}];"
+      },
+      "id": "b62496cd-f6a1-4856-a95a-a3f920330434",
+      "name": "Transform to HighLevel Format",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10800,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://services.leadconnectorhq.com/calendars/events/appointments",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $('Config').item.json.highlevelApiKey }}"
+            },
+            {
+              "name": "Version",
+              "value": "2021-04-15"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "body": "={{ $json }}",
+        "options": {}
+      },
+      "id": "156259eb-fd42-45b3-abaf-73284e01f84f",
+      "name": "Create HighLevel Appointment",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        11024,
+        -1072
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Summary of sync results\nconst items = $input.all();\nconst successCount = items.filter(item => item.json.id || item.json.event).length;\nconst totalCount = items.length;\n\nreturn [{\n  json: {\n    syncTime: new Date().toISOString(),\n    totalAppointments: totalCount,\n    successfulSyncs: successCount,\n    failedSyncs: totalCount - successCount,\n    message: `Successfully synced ${successCount} of ${totalCount} appointments from Tebra to HighLevel`\n  }\n}];"
+      },
+      "id": "aa476ce3-7aeb-4de5-a855-4212196b55d1",
+      "name": "Sync Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11248,
+        -1072
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config": {
+      "main": [
+        [
+          {
+            "node": "Prepare Date Range",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Date Range": {
+      "main": [
+        [
+          {
+            "node": "Get Tebra Appointments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Tebra Appointments": {
+      "main": [
+        [
+          {
+            "node": "Parse SOAP and Extract Appointments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse SOAP and Extract Appointments": {
+      "main": [
+        [
+          {
+            "node": "Filter Valid Appointments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Valid Appointments": {
+      "main": [
+        [
+          {
+            "node": "Get Appointment Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Appointment Details": {
+      "main": [
+        [
+          {
+            "node": "Parse Appointment Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Appointment Details": {
+      "main": [
+        [
+          {
+            "node": "Filter Valid Appointment Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Valid Appointment Details": {
+      "main": [
+        [
+          {
+            "node": "Get HighLevel Users",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get HighLevel Users": {
+      "main": [
+        [
+          {
+            "node": "Match User by Resource Name",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Match User by Resource Name": {
+      "main": [
+        [
+          {
+            "node": "Create or Update HighLevel Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create or Update HighLevel Contact": {
+      "main": [
+        [
+          {
+            "node": "Transform to HighLevel Format",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transform to HighLevel Format": {
+      "main": [
+        [
+          {
+            "node": "Create HighLevel Appointment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create HighLevel Appointment": {
+      "main": [
+        [
+          {
+            "node": "Sync Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "instanceId": "d50ae9164ab3b3fbd3a4986b8409f1d4cf3572c019e3a46f2953720743860f6a"
+  }
+}
