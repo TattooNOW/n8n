@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-background: hsl(210 20% 6%);
+  --color-foreground: hsl(210 20% 95%);
+
+  --color-card: hsl(210 20% 9%);
+  --color-card-foreground: hsl(210 20% 95%);
+
+  --color-muted: hsl(210 15% 15%);
+  --color-muted-foreground: hsl(210 10% 60%);
+
+  --color-accent: hsl(195 98% 23%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-accent-light: hsl(197 47% 46%);
+
+  --color-border: hsl(210 15% 18%);
+  --color-input: hsl(210 15% 18%);
+  --color-ring: hsl(195 98% 23%);
+
+  --color-destructive: hsl(0 62% 50%);
+  --color-success: hsl(142 70% 45%);
+  --color-warning: hsl(38 92% 50%);
+}
+
+*,
+*::before,
+*::after {
+  border-color: var(--color-border);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
