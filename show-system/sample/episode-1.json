@@ -1,0 +1,105 @@
+{
+  "EPISODE_NUMBER": "1",
+  "EPISODE_TITLE": "Why Your Website Is Losing You Clients",
+  "AIR_DATE": "2026-01-05",
+  "SEASON": "1",
+  "DURATION": "50",
+  "HOST_NAME": "TattooNOW Team",
+
+  "GUEST_NAME": "Mike DeVries",
+  "GUEST_TITLE": "Award-Winning Tattoo Artist & Studio Owner",
+  "GUEST_BIO": "Mike DeVries is a world-renowned tattoo artist known for his photorealistic portraits and biomechanical work. With over 25 years of experience, he owns MD Tattoo Studio in Northridge, California, and has won numerous awards including multiple Best of Show titles at major tattoo conventions.",
+  "GUEST_INSTAGRAM": "mdtattoostudio",
+  "GUEST_WEBSITE": "https://mdtattoostudio.com",
+
+  "EPISODE_DESCRIPTION": "In this inaugural episode, we sit down with legendary tattoo artist Mike DeVries to discuss the critical role your website plays in attracting and converting potential clients. Mike shares his insights on common website mistakes that cost artists thousands in lost bookings, and reveals the key elements every tattoo artist's website needs to succeed in 2026.",
+
+  "KEY_TOPICS": [
+    "The 7-second first impression rule for tattoo websites",
+    "Why beautiful gallery photos aren't enough to book clients",
+    "The booking funnel: from visitor to paying client",
+    "Mobile optimization: over 80% of tattoo clients browse on phones",
+    "Social proof and how to display it effectively",
+    "Clear calls-to-action that actually convert",
+    "SEO basics for tattoo artists (local search optimization)"
+  ],
+
+  "PRESENTATION_NAME": "Website Fundamentals for Tattoo Artists",
+  "PRESENTATION_ID": "P1",
+  "SLIDES_LIST": "- Slide 1: Title - Why Your Website Matters\n- Slide 5: Common Website Mistakes\n- Slide 12: The Perfect Portfolio Gallery\n- Slide 18: Mobile-First Design Principles\n- Slide 24: Booking Conversion Optimization",
+
+  "OPENING_SCRIPT": "Welcome to the very first episode of the TattooNOW Weekly Show! I'm thrilled to kick off this series where we'll be diving deep into the business side of tattooing—helping you turn your artistic passion into a thriving, profitable career.\n\nToday, we're tackling a topic that affects literally every tattoo artist: your website. Whether you have one or you're thinking about building one, this episode will change how you think about your online presence.\n\nAnd who better to discuss this with than the incredible Mike DeVries—a true master of the craft who's built not just an amazing portfolio, but an amazing business.",
+
+  "INTRO_SCRIPT": "Mike, thanks so much for being our first guest!\n\n[Mike responds]\n\nFor those who might not know your work, you've been tattooing for over 25 years, you're known worldwide for your photorealistic portraits and biomechanical pieces, and you run MD Tattoo Studio in Northridge, California. You've also won just about every award there is to win in this industry.\n\nBut today, we're not just talking about your art—we're talking about your business, specifically your website, which has become a major client acquisition tool for you. Let's start with a question: when did you realize that your website was actually losing you clients?",
+
+  "SEGMENT_1_TITLE": "The Website Reality Check",
+  "SEGMENT_1_SLIDES": "1, 5, 7, 9",
+  "SEGMENT_1_POINTS": [
+    "Most tattoo artists treat their website as an afterthought or digital business card",
+    "Your website is your 24/7 salesperson working even when you're not",
+    "First impressions happen in 7 seconds—if your site doesn't grab them immediately, they're gone",
+    "Common mistakes: outdated designs, slow loading times, unclear booking process, no mobile optimization"
+  ],
+  "SEGMENT_1_SCRIPT": "Let's talk about the harsh reality: most tattoo artists have terrible websites. And I don't mean that to be mean—I've been there too. But the truth is, your website might be actively costing you clients right now without you even knowing it.\n\nMike, you've mentioned before that you used to have a pretty basic website. What changed?\n\n[Mike discusses his website evolution]\n\nExactly. And this is so important for everyone listening. Your website isn't just a place to show off your portfolio. It's your primary client acquisition and conversion tool. Let's go through the most common mistakes...\n\n[Walks through Slide 5: Common Website Mistakes]\n\n1. No clear call-to-action\n2. Portfolio without context\n3. No pricing information (even a range helps)\n4. Terrible mobile experience\n5. No social proof or testimonials\n6. Complicated or missing booking system\n\nMike, which of these do you see most often when you look at other artists' sites?",
+
+  "SEGMENT_2_TITLE": "Building a Client-Converting Portfolio",
+  "SEGMENT_2_SLIDES": "12, 14, 16",
+  "SEGMENT_2_POINTS": [
+    "High-quality images are essential but not sufficient alone",
+    "Context matters: show healed tattoos, multiple angles, client stories",
+    "Organize by style, not just chronologically",
+    "Include variety: small pieces, large pieces, different skin tones, different body placements",
+    "Each portfolio piece should tell a story and demonstrate your expertise"
+  ],
+  "SEGMENT_2_SCRIPT": "Now let's talk about your portfolio—the heart of your website. Everyone knows you need good photos, but there's so much more to it.\n\n[References Slide 12: The Perfect Portfolio Gallery]\n\nMike, your portfolio on your website is incredible. But it's not just beautiful photos—you've structured it in a way that makes it easy for potential clients to see themselves getting tattooed by you. How do you think about organizing your portfolio?\n\n[Mike discusses portfolio strategy]\n\nThis is brilliant. Notice what Mike is saying: it's not about showing every tattoo you've ever done. It's about showing the RIGHT tattoos that attract your IDEAL clients.\n\nHere's what your portfolio section needs:\n\n1. High-resolution images that load quickly (optimize them!)\n2. Multiple views: fresh AND healed tattoos when possible\n3. Categories by style so clients can find what they want\n4. Brief descriptions: size, placement, session time, any special story\n5. A mix that shows your versatility within your specialty\n\nThe goal is to make potential clients think: 'Yes, this artist can definitely do what I want.'",
+
+  "SEGMENT_3_TITLE": "Mobile Optimization & Booking Conversion",
+  "SEGMENT_3_SLIDES": "18, 20, 24",
+  "SEGMENT_3_POINTS": [
+    "Over 80% of tattoo clients research artists on their phones",
+    "Mobile-first design is non-negotiable in 2026",
+    "Simplify the booking process: fewer clicks = more conversions",
+    "Clear CTAs: 'Book Consultation', 'Request Quote', 'View Availability'",
+    "Reduce friction: pre-fill forms, accept deposits online, send automatic confirmations"
+  ],
+  "SEGMENT_3_SCRIPT": "Let's talk about the technical side that can make or break your website: mobile optimization and booking conversion.\n\n[Shows Slide 18: Mobile-First Design Principles]\n\nHere's a stat that should wake everyone up: more than 80% of people looking for a tattoo artist do their research on their phone. Not on a desktop computer—on their phone. If your website doesn't work perfectly on mobile, you're losing 8 out of 10 potential clients before they even contact you.\n\nMike, when you rebuilt your website, how much focus did you put on the mobile experience?\n\n[Mike discusses mobile strategy]\n\nPerfect. And this leads directly into conversion optimization. You can have the most beautiful website in the world, but if people can't easily book with you, what's the point?\n\n[Shows Slide 24: Booking Conversion Optimization]\n\nHere's your booking funnel:\n1. They land on your site (usually from Instagram or Google)\n2. They browse your portfolio (this is where most artists stop)\n3. They decide they want to work with you\n4. They try to book... and this is where it often falls apart\n\nYour website needs to make step 4 EASY. That means:\n- A visible 'Book Now' or 'Request Consultation' button on every page\n- A simple form (don't ask for their life story)\n- Clear next steps after they submit\n- Automated confirmation email\n- If possible, online deposit payment to secure the booking\n\nMike, how has streamlining your booking process impacted your business?",
+
+  "QA_QUESTIONS": [
+    "What's the biggest mistake you see tattoo artists making with their websites?",
+    "How important is SEO for a tattoo artist's website?",
+    "Should tattoo artists include pricing on their website?",
+    "What's the one thing every tattoo website must have?",
+    "How often should artists update their portfolio on their website?",
+    "Do you recommend artists build their own websites or hire someone?"
+  ],
+  "QA_SCRIPT": "Alright, let's open this up for some rapid-fire questions. Mike, I've got a bunch of common questions that artists ask about websites.\n\n[Goes through Q&A questions with Mike]\n\nThese are such practical insights, Mike. The key takeaway here is that your website is an investment in your business, not an expense. Every artist needs to think about their website as their hardest-working employee.",
+
+  "CLOSING_SCRIPT": "Mike, this has been absolutely invaluable. Before we wrap up, what's the one piece of advice you'd give to an artist who's just starting to think about their website?\n\n[Mike gives final advice]\n\nPerfect. That's the perfect note to end on.\n\nFor everyone watching: your website is not optional in 2026. It's the foundation of your business. Start with the basics we covered today—mobile optimization, clear portfolio, easy booking—and you'll already be ahead of 90% of artists out there.\n\nThank you to Mike DeVries for being our inaugural guest. You can check out his work at mdtattoostudio.com and follow him on Instagram @mdtattoostudio.\n\nNext week, we're diving into pricing psychology for tattoo artists—how to price your work so you're profitable without pricing yourself out of the market. You won't want to miss it.\n\nIf you found this episode helpful, subscribe to our newsletter at tattoonow.com, follow us on social media, and share this with another artist who needs to hear it.\n\nThanks for watching, and we'll see you next week!",
+
+  "CAMERA_SETUP": "2-camera setup (host + guest angles), 4K resolution",
+  "LIGHTING_SETUP": "3-point lighting with softboxes",
+  "AUDIO_SETUP": "Lavalier mics + backup shotgun mic",
+  "RECORDING_SOFTWARE": "OBS Studio + backup camera recording",
+
+  "YOUTUBE_TITLE": "Why Your Website Is Losing You Clients (feat. Mike DeVries) | TattooNOW Weekly Ep. 1",
+  "YOUTUBE_DESCRIPTION": "World-renowned tattoo artist Mike DeVries reveals the critical website mistakes costing artists thousands in lost bookings—and how to fix them.\n\nIn this episode:\n✓ The 7-second first impression rule\n✓ How to build a portfolio that converts visitors to clients\n✓ Mobile optimization (80%+ of clients browse on phones)\n✓ Booking funnel optimization\n✓ Common website mistakes and how to avoid them\n\nGuest: Mike DeVries (@mdtattoostudio)\nWebsite: mdtattoostudio.com\n\nResources:\n• Website audit checklist: tattoonow.com/resources\n• Join TattooNOW: tattoonow.com/join\n\nNext Episode: Pricing Psychology for Tattoo Artists\n\n#TattooArtist #TattooBusiness #WebsiteDesign #TattooMarketing",
+  "YOUTUBE_TAGS": "tattoo business, tattoo artist website, tattoo marketing, Mike DeVries, tattoo portfolio, website design, tattoo industry, artist business",
+  "THUMBNAIL_FILE": "ep1-thumbnail-website-clients.jpg",
+
+  "INSTAGRAM_CAPTION": "🚨 Your website might be costing you thousands in lost bookings.\n\nIn our first episode, @mdtattoostudio breaks down the exact website mistakes that push clients away—and how to fix them.\n\nWatch the full episode (link in bio) to learn:\n✅ The 7-second first impression rule\n✅ How to optimize for mobile (where 80%+ of your traffic comes from)\n✅ Portfolio strategies that convert browsers into bookers\n✅ Booking funnel secrets\n\nDrop a 💻 if you're ready to fix your website!",
+  "INSTAGRAM_HASHTAGS": "#TattooArtist #TattooBusiness #TattooMarketing #ArtistLife #TattooIndustry #BusinessTips #WebsiteDesign #TattooNOW",
+
+  "LINKEDIN_POST": "Is your website losing you clients?\n\nIn the first episode of TattooNOW Weekly, we sit down with award-winning artist Mike DeVries to discuss the most common (and costly) website mistakes tattoo artists make.\n\nKey insights:\n• 80%+ of tattoo clients research on mobile—if your site isn't optimized, you're losing 8/10 potential clients\n• Your portfolio needs context, not just pretty pictures\n• A simplified booking process can double your conversion rate\n• Your website is your 24/7 salesperson\n\nWhether you're a tattoo artist or any service-based business owner, these website fundamentals apply to you.\n\nWatch the full episode: [link]\n\n#SmallBusiness #WebsiteOptimization #DigitalMarketing #CreativeEntrepreneur",
+
+  "NEWSLETTER_TOPIC": "Your Website Audit Checklist",
+  "NEWSLETTER_CTA": "Download our free 20-point website audit checklist and see how your site stacks up. Plus, get access to our recommended website builders and portfolio plugins.",
+
+  "PREVIOUS_EPISODE": "N/A (First Episode)",
+  "NEXT_EPISODE": "Episode 2: Pricing Psychology for Tattoo Artists",
+  "RELATED_ARTICLES": "How to Photograph Your Tattoos for Your Portfolio, SEO Basics for Local Tattoo Artists, Instagram vs. Website: What You Actually Need",
+  "PRESENTATION_LINK": "https://tattoonow.com/presentations/p1-website-fundamentals",
+
+  "MEETING_FOCUS": "Website fundamentals: How to review and improve your online presence",
+
+  "GENERATION_DATE": "2026-02-16"
+}
