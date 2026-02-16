@@ -353,6 +353,117 @@ None! The script generator uses only Node.js built-in modules:
 - `path` - Path manipulation
 - `url` - URL and file path conversion
 
+## 🎥 Presenter Mode (Google Slides-Style Dual View)
+
+### Overview
+
+The React slideshow system now includes a **Presenter Mode** - a dual-window setup similar to Google Slides presenter view:
+
+- **Audience View** (OBS): Clean slides displayed to viewers
+- **Presenter View** (Host monitor): Notes, timer, next slide preview, controls
+
+Both windows stay perfectly synchronized using BroadcastChannel API.
+
+### Setup for Live Show
+
+1. **Start React dev server:**
+   ```bash
+   cd /home/user/n8n
+   npm run dev
+   ```
+
+2. **Open Audience View in OBS:**
+   - Add Browser Source
+   - URL: `http://localhost:5173/slideshow?episode=2-with-script`
+   - Resolution: 1920x1080
+   - This is what viewers see (clean slides, no notes)
+
+3. **Open Presenter View (Host's Monitor):**
+   - Open browser: `http://localhost:5173/slideshow?episode=2-with-script&mode=presenter`
+   - Position on host's monitor (not visible to audience)
+   - This shows: current slide, next slide, presenter notes, timer, controls
+
+### Presenter View Features
+
+**Layout:**
+- **Top Row**: Current slide (60%) + Next slide preview (40%)
+- **Middle**: Presenter notes panel (scrollable, large text)
+- **Bottom Toolbar**:
+  - Timer (elapsed/remaining with color warnings)
+  - Current time (wall clock)
+  - Slide counter (3/25)
+  - Navigation controls (Prev/Next buttons)
+  - Overlay toggles (QR Code, Lower-Third)
+
+**Sync:**
+- Navigate in presenter view → audience view updates instantly
+- Keyboard shortcuts work in both views
+- Stream Deck controls sync to both windows
+- BroadcastChannel API (< 100ms latency)
+
+### Keyboard Shortcuts
+
+**Both Views:**
+- `← →` or `PgUp/PgDn`: Previous/Next slide
+- `Q`: Toggle QR code
+- `L`: Toggle lower-third overlay
+- `G`: Toggle portfolio grid/fullscreen
+- `Home`: Jump to first slide
+- `End`: Jump to last slide
+
+**Presenter View Only:**
+- `T`: Start/Pause timer
+- `R`: Reset timer
+
+### Episode Data Format with Presenter Notes
+
+To use presenter mode, your episode JSON must include `presenterNotes` in the `SHOW_SCRIPT` array:
+
+```json
+{
+  "SHOW_SCRIPT": [
+    {
+      "segment": "INTRO",
+      "timeCode": "0:00",
+      "title": "Show Open & Episode Overview",
+      "type": "intro",
+      "talkingPoints": [
+        "Welcome to TattooNOW Weekly Show",
+        "Today: Pricing psychology"
+      ],
+      "presenterNotes": "Energy: HIGH. Make eye contact. Emphasize how common underpricing is. Build anticipation for guest reveal.",
+      "cue": "CUE: Transition to Segment 1 after intro"
+    }
+  ]
+}
+```
+
+**Key Difference:**
+- `talkingPoints` (array): Bullet points shown to audience in OBS
+- `presenterNotes` (string): Detailed notes ONLY visible in presenter view
+
+**Example Files:**
+- `/home/user/n8n/public/data/episode-2-with-script.json` - Full example with presenterNotes
+- `/home/user/n8n/public/data/episode-3-with-script.json` - Uses legacy `notes` field (still works)
+
+### Benefits
+
+**For Host:**
+- Never forget talking points (detailed notes always visible)
+- Time management (elapsed/remaining at a glance)
+- Smooth transitions (see next slide before advancing)
+- Professional confidence
+
+**For Viewers:**
+- Clean, distraction-free slides
+- Easy to read bullet points
+- Professional presentation
+
+**For Production:**
+- Automatic window sync (no manual coordination)
+- Flexible control (Stream Deck, keyboard, or mouse)
+- Easy setup (just two browser windows)
+
 ## 🚀 Future Enhancements
 
 Potential additions to the system:

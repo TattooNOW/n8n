@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { TitleCard } from './TitleCard';
 import { PortfolioSlide } from './PortfolioSlide';
 import { EducationSlide } from './EducationSlide';
 import { LowerThird } from './LowerThird';
 import { QRCode, QRCodeWithTracking } from './QRCode';
 import ScriptSlide from '../slides/ScriptSlide';
+import { PresenterView } from './PresenterView';
 
 /**
  * SlideController - Main slideshow controller
@@ -13,15 +15,83 @@ import ScriptSlide from '../slides/ScriptSlide';
  * - Keyboard controls
  * - Stream Deck integration (WebSocket/HTTP)
  * - Overlay toggling (QR codes, lower-thirds)
+ * - Dual-window presenter mode with BroadcastChannel sync
  */
 export function SlideController({ episodeData }) {
+  const [searchParams] = useSearchParams();
+  const mode = searchParams.get('mode'); // 'presenter' or null
+
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [showQR, setShowQR] = useState(false);
   const [showLowerThird, setShowLowerThird] = useState(false);
   const [portfolioLayout, setPortfolioLayout] = useState('grid'); // 'grid' or 'fullscreen'
 
+  // BroadcastChannel for syncing between audience and presenter windows
+  const channelRef = useRef(null);
+
   // Build slides array from episode data
   const slides = buildSlides(episodeData);
+
+  // Initialize BroadcastChannel for window sync
+  useEffect(() => {
+    channelRef.current = new BroadcastChannel('tattoonow-slideshow-sync');
+
+    channelRef.current.onmessage = (event) => {
+      const { type, payload } = event.data;
+
+      switch (type) {
+        case 'SLIDE_CHANGE':
+          setCurrentSlideIndex(payload.slideIndex);
+          break;
+        case 'QR_TOGGLE':
+          setShowQR(payload.show);
+          break;
+        case 'LOWER_THIRD_TOGGLE':
+          setShowLowerThird(payload.show);
+          break;
+        case 'PORTFOLIO_LAYOUT_TOGGLE':
+          setPortfolioLayout(payload.layout);
+          break;
+        default:
+          break;
+      }
+    };
+
+    return () => {
+      if (channelRef.current) {
+        channelRef.current.close();
+      }
+    };
+  }, []);
+
+  // Broadcast functions
+  const broadcastSlideChange = useCallback((index) => {
+    channelRef.current?.postMessage({
+      type: 'SLIDE_CHANGE',
+      payload: { slideIndex: index }
+    });
+  }, []);
+
+  const broadcastQRToggle = useCallback((show) => {
+    channelRef.current?.postMessage({
+      type: 'QR_TOGGLE',
+      payload: { show }
+    });
+  }, []);
+
+  const broadcastLowerThirdToggle = useCallback((show) => {
+    channelRef.current?.postMessage({
+      type: 'LOWER_THIRD_TOGGLE',
+      payload: { show }
+    });
+  }, []);
+
+  const broadcastPortfolioLayoutToggle = useCallback((layout) => {
+    channelRef.current?.postMessage({
+      type: 'PORTFOLIO_LAYOUT_TOGGLE',
+      payload: { layout }
+    });
+  }, []);
 
   // Keyboard controls
   useEffect(() => {
@@ -106,26 +176,46 @@ export function SlideController({ episodeData }) {
     };
   }, []);
 
-  // Navigation functions
+  // Navigation functions (with broadcast)
   const nextSlide = useCallback(() => {
-    setCurrentSlideIndex((prev) => Math.min(prev + 1, slides.length - 1));
-  }, [slides.length]);
+    setCurrentSlideIndex((prev) => {
+      const newIndex = Math.min(prev + 1, slides.length - 1);
+      broadcastSlideChange(newIndex);
+      return newIndex;
+    });
+  }, [slides.length, broadcastSlideChange]);
 
   const previousSlide = useCallback(() => {
-    setCurrentSlideIndex((prev) => Math.max(prev - 1, 0));
-  }, []);
+    setCurrentSlideIndex((prev) => {
+      const newIndex = Math.max(prev - 1, 0);
+      broadcastSlideChange(newIndex);
+      return newIndex;
+    });
+  }, [broadcastSlideChange]);
 
   const toggleQR = useCallback(() => {
-    setShowQR((prev) => !prev);
-  }, []);
+    setShowQR((prev) => {
+      const newValue = !prev;
+      broadcastQRToggle(newValue);
+      return newValue;
+    });
+  }, [broadcastQRToggle]);
 
   const toggleLowerThird = useCallback(() => {
-    setShowLowerThird((prev) => !prev);
-  }, []);
+    setShowLowerThird((prev) => {
+      const newValue = !prev;
+      broadcastLowerThirdToggle(newValue);
+      return newValue;
+    });
+  }, [broadcastLowerThirdToggle]);
 
   const togglePortfolioLayout = useCallback(() => {
-    setPortfolioLayout((prev) => (prev === 'grid' ? 'fullscreen' : 'grid'));
-  }, []);
+    setPortfolioLayout((prev) => {
+      const newLayout = prev === 'grid' ? 'fullscreen' : 'grid';
+      broadcastPortfolioLayoutToggle(newLayout);
+      return newLayout;
+    });
+  }, [broadcastPortfolioLayoutToggle]);
 
   const jumpToSegment = useCallback((segmentNumber) => {
     // Find the index of the first slide for the given segment
@@ -134,8 +224,9 @@ export function SlideController({ episodeData }) {
     );
     if (segmentIndex >= 0) {
       setCurrentSlideIndex(segmentIndex);
+      broadcastSlideChange(segmentIndex);
     }
-  }, [slides]);
+  }, [slides, broadcastSlideChange]);
 
   if (!episodeData || slides.length === 0) {
     return (
@@ -149,6 +240,24 @@ export function SlideController({ episodeData }) {
 
   const currentSlide = slides[currentSlideIndex];
 
+  // Render Presenter View if mode=presenter
+  if (mode === 'presenter') {
+    return (
+      <PresenterView
+        episodeData={episodeData}
+        currentSlideIndex={currentSlideIndex}
+        slides={slides}
+        nextSlide={nextSlide}
+        previousSlide={previousSlide}
+        toggleQR={toggleQR}
+        toggleLowerThird={toggleLowerThird}
+        showQR={showQR}
+        showLowerThird={showLowerThird}
+      />
+    );
+  }
+
+  // Render Audience View (default)
   return (
     <div className="relative">
       {/* Main slide content */}
@@ -293,6 +402,7 @@ function buildSlidesFromScript(episodeData) {
       scriptType: scriptItem.type,
       talkingPoints: scriptItem.talkingPoints || [],
       notes: scriptItem.notes,
+      presenterNotes: scriptItem.presenterNotes || scriptItem.notes,
       cue: scriptItem.cue
     });
 
