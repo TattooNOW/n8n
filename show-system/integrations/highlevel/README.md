@@ -154,20 +154,20 @@ These need to be created as custom fields:
     ↓
 2. Extract Form Data
     ↓
-3. Download Portfolio Images (parallel)
+3. Format Portfolio Image URLs (HighLevel-hosted)
     ↓
-4. Upload to Cloud Storage (S3/Cloudinary)
+4. Insert Guest into Supabase
     ↓
-5. Insert Guest into Supabase
+5. Create Episode Draft (if scheduled)
     ↓
-6. Create Episode Draft (if scheduled)
+6. Generate HighLevel QR Code
     ↓
-7. Generate HighLevel QR Code
+7. Send Confirmation Email
     ↓
-8. Send Confirmation Email
-    ↓
-9. Notify Team (Slack)
+8. Notify Team (Slack)
 ```
+
+**Note:** Portfolio images uploaded to HighLevel are already hosted and accessible via URLs. We store these URLs directly in Supabase - no need to re-upload to a separate image hosting service.
 
 ### Node 1: HighLevel Webhook
 
@@ -208,35 +208,39 @@ return {
 };
 ```
 
-### Node 3-4: Download & Upload Portfolio Images
+### Node 3: Format Portfolio Images
 
-**Loop Over Images:**
+**No re-upload needed! HighLevel already hosts the images.**
 
 ```javascript
-// For each portfolio image URL
+// Format portfolio images from HighLevel URLs
+const portfolioUrls = $json.portfolio_urls;
 const portfolioImages = [];
 
-for (const imageUrl of $json.portfolio_urls) {
-  // Download image
-  const imageResponse = await $http.request({
-    method: 'GET',
-    url: imageUrl,
-    responseType: 'arraybuffer'
-  });
+for (let i = 0; i < portfolioUrls.length; i++) {
+  const imageUrl = portfolioUrls[i];
 
-  // Upload to Cloudinary/S3
-  const uploadedUrl = await uploadToCloudStorage(imageResponse.data);
+  // Skip empty URLs
+  if (!imageUrl || imageUrl.trim() === '') continue;
 
   portfolioImages.push({
-    url: uploadedUrl,
-    description: '' // Guest can add descriptions later
+    url: imageUrl, // HighLevel-hosted URL
+    description: '', // Guest can add descriptions later
+    order: i + 1,
+    source: 'highlevel'
   });
 }
 
-return { json: { portfolio_images: portfolioImages } };
+return {
+  json: {
+    ...$json,
+    portfolio_images: portfolioImages,
+    image_count: portfolioImages.length
+  }
+};
 ```
 
-### Node 5: Insert Guest into Supabase
+### Node 4: Insert Guest into Supabase
 
 **HTTP Request Node:**
 
@@ -272,7 +276,7 @@ return { json: { portfolio_images: portfolioImages } };
 
 **Returns:** Guest record with `id`
 
-### Node 6: Create Episode Draft (Optional)
+### Node 5: Create Episode Draft (Optional)
 
 If guest selected a preferred air date, create episode:
 
@@ -292,7 +296,7 @@ If guest selected a preferred air date, create episode:
 }
 ```
 
-### Node 7: Generate HighLevel QR Code
+### Node 6: Generate HighLevel QR Code
 
 **HTTP Request to HighLevel API:**
 
@@ -318,7 +322,7 @@ return {
 };
 ```
 
-### Node 8: Send Confirmation Email
+### Node 7: Send Confirmation Email
 
 **Send Email Node:**
 
@@ -346,7 +350,7 @@ Best,
 Ryan Pierce & the TattooNOW Team
 ```
 
-### Node 9: Notify Team (Slack)
+### Node 8: Notify Team (Slack)
 
 **Slack Node:**
 

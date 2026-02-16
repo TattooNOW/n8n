@@ -23,8 +23,7 @@ Complete step-by-step guide to deploy the show system to production.
 
 - ✅ **Supabase** (https://supabase.com) - Database backend
 - ✅ **n8n** (https://n8n.io) - Workflow automation (self-hosted or cloud)
-- ✅ **HighLevel** (https://gohighlevel.com) - CRM & forms
-- ✅ **Cloudinary** (https://cloudinary.com) - Image hosting
+- ✅ **HighLevel** (https://gohighlevel.com) - CRM & forms (also hosts portfolio images)
 - ✅ **Slack** (optional) - Team notifications
 - ✅ **OpenAI** (https://openai.com) - AI slide generation from blog posts
 - ✅ **Vercel/Netlify** (optional) - Host React slideshow app
@@ -67,11 +66,6 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 # HighLevel
 HIGHLEVEL_API_KEY=your-api-key
 HIGHLEVEL_LOCATION_ID=your-location-id
-
-# Cloudinary
-CLOUDINARY_CLOUD_NAME=your-cloud-name
-CLOUDINARY_API_KEY=your-api-key
-CLOUDINARY_API_SECRET=your-api-secret
 
 # OpenAI (for RSS → slides)
 OPENAI_API_KEY=sk-your-key
@@ -162,10 +156,6 @@ Open http://localhost:5688
 - Type: HTTP Header Auth
 - Name: `Authorization`
 - Value: `Bearer YOUR_SERVICE_ROLE_KEY`
-
-**Cloudinary:**
-- Type: Cloudinary Account
-- Cloud name, API key, API secret
 
 **OpenAI:**
 - Type: OpenAI API

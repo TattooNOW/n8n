@@ -25,78 +25,12 @@
     },
     {
       "parameters": {
-        "functionCode": "// Download and process portfolio images\nconst portfolioUrls = $json.portfolio_urls;\nconst processedImages = [];\n\nfor (let i = 0; i < portfolioUrls.length; i++) {\n  const imageUrl = portfolioUrls[i];\n  \n  // Skip empty URLs\n  if (!imageUrl || imageUrl.trim() === '') continue;\n  \n  try {\n    // Download image\n    const response = await this.helpers.httpRequest({\n      method: 'GET',\n      url: imageUrl,\n      encoding: 'arraybuffer',\n      returnFullResponse: true\n    });\n    \n    // Get file extension from URL or content-type\n    let extension = 'jpg';\n    const urlExt = imageUrl.split('.').pop().split('?')[0];\n    if (['jpg', 'jpeg', 'png', 'webp'].includes(urlExt.toLowerCase())) {\n      extension = urlExt.toLowerCase();\n    }\n    \n    const contentType = response.headers['content-type'];\n    if (contentType && contentType.includes('png')) extension = 'png';\n    if (contentType && contentType.includes('webp')) extension = 'webp';\n    \n    // Store image data for next node\n    processedImages.push({\n      data: Buffer.from(response.body).toString('base64'),\n      filename: `${$json.guest_name.toLowerCase().replace(/\\s+/g, '-')}-${i + 1}.${extension}`,\n      contentType: contentType || 'image/jpeg',\n      originalUrl: imageUrl\n    });\n  } catch (error) {\n    console.error(`Failed to download image ${imageUrl}:`, error.message);\n  }\n}\n\nreturn {\n  json: {\n    ...$json,\n    processed_images: processedImages,\n    image_count: processedImages.length\n  }\n};"
+        "functionCode": "// Format portfolio images from HighLevel URLs\n// No need to re-upload - HighLevel already hosts the images\nconst portfolioUrls = $json.portfolio_urls;\nconst portfolioImages = [];\n\nfor (let i = 0; i < portfolioUrls.length; i++) {\n  const imageUrl = portfolioUrls[i];\n  \n  // Skip empty URLs\n  if (!imageUrl || imageUrl.trim() === '') continue;\n  \n  portfolioImages.push({\n    url: imageUrl,\n    description: '', // Guest can add descriptions later\n    order: i + 1,\n    source: 'highlevel'\n  });\n}\n\nreturn {\n  json: {\n    ...$json,\n    portfolio_images: portfolioImages,\n    image_count: portfolioImages.length\n  }\n};"
       },
-      "name": "Download Portfolio Images",
+      "name": "Format Portfolio Images",
       "type": "n8n-nodes-base.function",
       "typeVersion": 1,
       "position": [650, 300]
-    },
-    {
-      "parameters": {
-        "mode": "combine",
-        "combinationMode": "multiplex"
-      },
-      "name": "Loop Over Images",
-      "type": "n8n-nodes-base.splitInBatches",
-      "typeVersion": 1,
-      "position": [850, 300]
-    },
-    {
-      "parameters": {
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "requestMethod": "POST",
-        "url": "https://api.cloudinary.com/v1_1/{{ $env.CLOUDINARY_CLOUD_NAME }}/image/upload",
-        "sendBody": true,
-        "bodyParameters": {
-          "parameters": [
-            {
-              "name": "file",
-              "value": "data:{{ $json.processed_images[$index].contentType }};base64,{{ $json.processed_images[$index].data }}"
-            },
-            {
-              "name": "upload_preset",
-              "value": "tattoonow_portfolio"
-            },
-            {
-              "name": "folder",
-              "value": "guests/{{ $json.guest_name }}"
-            },
-            {
-              "name": "public_id",
-              "value": "{{ $json.processed_images[$index].filename }}"
-            }
-          ]
-        },
-        "options": {
-          "batching": {
-            "batch": {
-              "batchSize": 1,
-              "batchInterval": 1000
-            }
-          }
-        }
-      },
-      "name": "Upload to Cloudinary",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 3,
-      "position": [1050, 300],
-      "credentials": {
-        "httpHeaderAuth": {
-          "id": "cloudinary",
-          "name": "Cloudinary API"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "functionCode": "// Aggregate uploaded image URLs\nconst items = $input.all();\nconst portfolioImages = [];\n\nitems.forEach((item, index) => {\n  if (item.json.secure_url) {\n    portfolioImages.push({\n      url: item.json.secure_url,\n      public_id: item.json.public_id,\n      width: item.json.width,\n      height: item.json.height,\n      format: item.json.format,\n      description: ''\n    });\n  }\n});\n\n// Get original data from first item\nconst originalData = items[0].json;\n\nreturn {\n  json: {\n    guest_name: originalData.guest_name,\n    guest_email: originalData.guest_email,\n    guest_phone: originalData.guest_phone,\n    artist_title: originalData.artist_title,\n    tattoo_style: originalData.tattoo_style,\n    location: originalData.location,\n    instagram: originalData.instagram,\n    website: originalData.website,\n    bio: originalData.bio,\n    discussion_topics: originalData.discussion_topics,\n    custom_topics: originalData.custom_topics,\n    preferred_date: originalData.preferred_date,\n    booking_preference: originalData.booking_preference,\n    highlevel_contact_id: originalData.highlevel_contact_id,\n    portfolio_images: portfolioImages\n  }\n};"
-      },
-      "name": "Aggregate Images",
-      "type": "n8n-nodes-base.function",
-      "typeVersion": 1,
-      "position": [1250, 300]
     },
     {
       "parameters": {
@@ -133,7 +67,7 @@
       "name": "Insert Guest into Supabase",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
-      "position": [1450, 300]
+      "position": [850, 300]
     },
     {
       "parameters": {
@@ -149,7 +83,7 @@
       "name": "Has Preferred Date?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
-      "position": [1650, 300]
+      "position": [1050, 300]
     },
     {
       "parameters": {
@@ -186,7 +120,7 @@
       "name": "Create Episode Draft",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 3,
-      "position": [1850, 200]
+      "position": [1250, 200]
     },
     {
       "parameters": {
@@ -200,18 +134,18 @@
       "name": "Send Confirmation Email",
       "type": "n8n-nodes-base.emailSend",
       "typeVersion": 2,
-      "position": [1850, 400]
+      "position": [1250, 400]
     },
     {
       "parameters": {
         "channel": "show-bookings",
-        "text": "=🎨 **New Guest Application!**\\n\\n*Name:* {{ $json.guest_name }}\\n*Style:* {{ $json.tattoo_style }}\\n*Location:* {{ $json.location }}\\n*Instagram:* @{{ $json.instagram }}\\n\\n*Topics:* {{ $json.discussion_topics.join(', ') }}\\n\\n*Portfolio:* {{ $json.portfolio_images.length }} images uploaded\\n\\n*Review:* <https://app.supabase.com|Supabase Dashboard>",
+        "text": "=🎨 **New Guest Application!**\\n\\n*Name:* {{ $json.guest_name }}\\n*Style:* {{ $json.tattoo_style }}\\n*Location:* {{ $json.location }}\\n*Instagram:* @{{ $json.instagram }}\\n\\n*Topics:* {{ $json.discussion_topics.join(', ') }}\\n\\n*Portfolio:* {{ $json.portfolio_images.length }} images submitted\\n\\n*Review:* <https://app.supabase.com|Supabase Dashboard>",
         "otherOptions": {}
       },
       "name": "Notify Team via Slack",
       "type": "n8n-nodes-base.slack",
       "typeVersion": 1,
-      "position": [1850, 600],
+      "position": [1250, 600],
       "credentials": {
         "slackApi": {
           "id": "slack",
@@ -228,7 +162,7 @@
       "name": "Respond to HighLevel",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1,
-      "position": [2050, 400]
+      "position": [1450, 400]
     }
   ],
   "connections": {
@@ -247,54 +181,14 @@
       "main": [
         [
           {
-            "node": "Download Portfolio Images",
+            "node": "Format Portfolio Images",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Download Portfolio Images": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Images",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Loop Over Images": {
-      "main": [
-        [
-          {
-            "node": "Upload to Cloudinary",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Aggregate Images",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Upload to Cloudinary": {
-      "main": [
-        [
-          {
-            "node": "Loop Over Images",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Aggregate Images": {
+    "Format Portfolio Images": {
       "main": [
         [
           {
