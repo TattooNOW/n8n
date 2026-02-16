@@ -1,0 +1,112 @@
+{
+  "EPISODE_NUMBER": 1,
+  "EPISODE_TITLE": "Building Your Digital Presence as a Tattoo Artist",
+  "AIR_DATE": "2026-02-20T19:00:00Z",
+  "HOST": "Ryan Pierce",
+  "QR_CODE_URL": "https://tattoonow.com/book",
+  "QR_CODE_MESSAGE": "Book Your Free Consultation",
+  "HIGHLEVEL_QR_URL": null,
+
+  "SEGMENT_1_TYPE": "interview",
+  "SEGMENT_1_GUEST_NAME": "Sarah Chen",
+  "SEGMENT_1_GUEST_TITLE": "Award-Winning Watercolor Artist",
+  "SEGMENT_1_GUEST_STYLE": "Watercolor & Botanical",
+  "SEGMENT_1_GUEST_LOCATION": "Portland, OR",
+  "SEGMENT_1_GUEST_INSTAGRAM": "sarahchen.ink",
+  "SEGMENT_1_PORTFOLIO_IMAGES": [
+    {
+      "url": "https://picsum.photos/800/600?random=1",
+      "description": "Watercolor floral sleeve - Cherry blossoms"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=2",
+      "description": "Abstract geometric design with watercolor splashes"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=3",
+      "description": "Botanical back piece - Native Oregon wildflowers"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=4",
+      "description": "Minimalist watercolor bird - Hummingbird"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=5",
+      "description": "Full color sleeve - Japanese maple leaves"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=6",
+      "description": "Watercolor portrait - Custom memorial piece"
+    }
+  ],
+
+  "SEGMENT_2_TYPE": "education",
+  "SEGMENT_2_SLIDES": [
+    {
+      "title": "Why Your Website Matters",
+      "visual": "https://picsum.photos/800/600?random=10",
+      "keyPoints": [
+        "80% of clients research online before booking",
+        "Your website is your digital portfolio",
+        "First impressions happen in 7 seconds",
+        "Professional site = professional artist"
+      ],
+      "stats": [
+        {
+          "value": "3x",
+          "label": "More bookings with a professional site"
+        },
+        {
+          "value": "67%",
+          "label": "Check Instagram before website"
+        }
+      ],
+      "layout": "split"
+    },
+    {
+      "title": "Essential Website Elements",
+      "keyPoints": [
+        "High-quality portfolio gallery",
+        "Clear booking process & pricing",
+        "Artist bio & credentials",
+        "Client testimonials",
+        "Contact form & location"
+      ],
+      "stats": [],
+      "layout": "text-focus"
+    }
+  ],
+
+  "SEGMENT_3_TYPE": "interview",
+  "SEGMENT_3_GUEST_NAME": "Marcus Johnson",
+  "SEGMENT_3_GUEST_TITLE": "Black & Grey Realism Specialist",
+  "SEGMENT_3_GUEST_STYLE": "Black & Grey Realism",
+  "SEGMENT_3_GUEST_LOCATION": "Atlanta, GA",
+  "SEGMENT_3_GUEST_INSTAGRAM": "marcusj.tattoo",
+  "SEGMENT_3_PORTFOLIO_IMAGES": [
+    {
+      "url": "https://picsum.photos/800/600?random=20",
+      "description": "Portrait realism - Memorial piece"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=21",
+      "description": "Wildlife realism - Lion portrait"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=22",
+      "description": "Black & grey sleeve - Clock and roses"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=23",
+      "description": "Photo-realistic face - Custom design"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=24",
+      "description": "Architectural piece - City skyline"
+    },
+    {
+      "url": "https://picsum.photos/800/600?random=25",
+      "description": "Animal realism - Wolf and forest scene"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+/**
+ * TattooNOW Brand Design System
+ * Primary Brand: Orange (from logo)
+ * Style: Professional yet approachable, modern, clean
+ * Mission: "Connecting tattooers & collectors since the 90s"
+ */
+
+@theme {
+  /* TattooNOW Brand Colors */
+  --color-tattoonow-orange: hsl(25 95% 53%);
+  --color-tattoonow-orange-light: hsl(25 95% 65%);
+  --color-tattoonow-orange-dark: hsl(25 95% 40%);
+
+  /* Dark theme base (professional, clean) */
+  --color-background: hsl(210 20% 6%);
+  --color-foreground: hsl(210 20% 95%);
+
+  --color-card: hsl(210 20% 9%);
+  --color-card-foreground: hsl(210 20% 95%);
+
+  --color-muted: hsl(210 15% 15%);
+  --color-muted-foreground: hsl(210 10% 60%);
+
+  /* Primary accent: TattooNOW Orange */
+  --color-accent: var(--color-tattoonow-orange);
+  --color-accent-foreground: hsl(0 0% 100%);
+  --color-accent-light: var(--color-tattoonow-orange-light);
+
+  /* Secondary accent: Teal (complementary) */
+  --color-secondary: hsl(195 98% 23%);
+  --color-secondary-light: hsl(197 47% 46%);
+
+  --color-border: hsl(210 15% 18%);
+  --color-input: hsl(210 15% 18%);
+  --color-ring: var(--color-tattoonow-orange);
+
+  --color-destructive: hsl(0 62% 50%);
+  --color-success: hsl(142 70% 45%);
+  --color-warning: hsl(38 92% 50%);
+
+  /* Typography */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* OBS Slideshow specific (1920x1080) */
+  --slideshow-width: 1920px;
+  --slideshow-height: 1080px;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Animations */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 400ms ease-in-out;
+}
+
+/* Slideshow base styles (1920x1080 for OBS) */
+.slideshow-container {
+  width: var(--slideshow-width);
+  height: var(--slideshow-height);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  overflow: hidden;
+  position: relative;
+}
+
+/* TattooNOW branding elements */
+.brand-gradient {
+  background: linear-gradient(135deg, var(--color-tattoonow-orange) 0%, var(--color-tattoonow-orange-dark) 100%);
+}
+
+.brand-accent {
+  color: var(--color-tattoonow-orange);
+}
+
+.brand-border {
+  border-color: var(--color-tattoonow-orange);
+}
+
+/* Slide transitions */
+.slide-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.slide-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
