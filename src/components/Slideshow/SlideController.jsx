@@ -4,6 +4,7 @@ import { PortfolioSlide } from './PortfolioSlide';
 import { EducationSlide } from './EducationSlide';
 import { LowerThird } from './LowerThird';
 import { QRCode, QRCodeWithTracking } from './QRCode';
+import ScriptSlide from '../slides/ScriptSlide';
 
 /**
  * SlideController - Main slideshow controller
@@ -188,12 +189,20 @@ export function SlideController({ episodeData }) {
 
 /**
  * Build slides array from episode data
+ * If SHOW_SCRIPT exists, use it to interleave script slides with content slides
+ * Otherwise, fall back to legacy segment-based building
  */
 function buildSlides(episodeData) {
   const slides = [];
 
   if (!episodeData) return slides;
 
+  // NEW: Script-driven slideshow (preferred)
+  if (episodeData.SHOW_SCRIPT && Array.isArray(episodeData.SHOW_SCRIPT)) {
+    return buildSlidesFromScript(episodeData);
+  }
+
+  // LEGACY: Segment-based slideshow (backwards compatible)
   // Title card
   slides.push({
     type: 'title',
@@ -219,7 +228,6 @@ function buildSlides(episodeData) {
       guestInstagram: episodeData.SEGMENT_1_GUEST_INSTAGRAM
     });
   } else if (episodeData.SEGMENT_1_TYPE === 'education') {
-    // Parse education slides from presentation
     const educationSlides = parseEducationSlides(episodeData, 1);
     slides.push(...educationSlides);
   }
@@ -263,6 +271,60 @@ function buildSlides(episodeData) {
     const educationSlides = parseEducationSlides(episodeData, 3);
     slides.push(...educationSlides);
   }
+
+  return slides;
+}
+
+/**
+ * Build slides from SHOW_SCRIPT array (new preferred method)
+ * Interleaves script slides with portfolio/education slides
+ */
+function buildSlidesFromScript(episodeData) {
+  const slides = [];
+  const script = episodeData.SHOW_SCRIPT;
+
+  script.forEach((scriptItem) => {
+    // Add script slide
+    slides.push({
+      type: 'script',
+      segment: scriptItem.segment,
+      timeCode: scriptItem.timeCode,
+      title: scriptItem.title,
+      scriptType: scriptItem.type,
+      talkingPoints: scriptItem.talkingPoints || [],
+      notes: scriptItem.notes,
+      cue: scriptItem.cue
+    });
+
+    // After certain script slides, insert content slides (portfolio/education)
+    // Based on cue or title matching
+    if (scriptItem.cue && scriptItem.cue.includes('Portfolio')) {
+      // Insert portfolio slide for segment 1
+      if (episodeData.SEGMENT_1_TYPE === 'interview' && scriptItem.segment === 'SEGMENT 1') {
+        slides.push({
+          type: 'portfolio',
+          segment: 1,
+          artistName: episodeData.SEGMENT_1_GUEST_NAME,
+          artistStyle: episodeData.SEGMENT_1_GUEST_STYLE,
+          artistLocation: episodeData.SEGMENT_1_GUEST_LOCATION,
+          artistInstagram: episodeData.SEGMENT_1_GUEST_INSTAGRAM,
+          images: episodeData.SEGMENT_1_PORTFOLIO_IMAGES || [],
+          showLowerThird: true,
+          guestName: episodeData.SEGMENT_1_GUEST_NAME,
+          guestTitle: episodeData.SEGMENT_1_GUEST_TITLE,
+          guestInstagram: episodeData.SEGMENT_1_GUEST_INSTAGRAM
+        });
+      }
+    }
+
+    if (scriptItem.cue && scriptItem.cue.includes('Education Slides')) {
+      // Insert education slides for segment 2
+      if (episodeData.SEGMENT_2_TYPE === 'education' && scriptItem.segment === 'SEGMENT 2') {
+        const educationSlides = parseEducationSlides(episodeData, 2);
+        slides.push(...educationSlides);
+      }
+    }
+  });
 
   return slides;
 }
@@ -326,6 +388,21 @@ function renderSlide(slide, portfolioLayout) {
           keyPoints={slide.keyPoints}
           stats={slide.stats}
           layout={slide.layout}
+        />
+      );
+
+    case 'script':
+      return (
+        <ScriptSlide
+          script={{
+            segment: slide.segment,
+            timeCode: slide.timeCode,
+            title: slide.title,
+            type: slide.scriptType,
+            talkingPoints: slide.talkingPoints,
+            notes: slide.notes,
+            cue: slide.cue
+          }}
         />
       );
 
