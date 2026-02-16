@@ -1,683 +1,515 @@
-# P1: Website Fundamentals for Tattoo Artists
-**Presentation for Episode 1: "Why Your Website Is Losing You Clients"**
+# Episode 1: Why Your Website Is Losing You Clients
+**Run of Show with Presentation Slides**
+
+**Guest:** Mike DeVries - Award-Winning Tattoo Artist & Studio Owner
+**Duration:** 40 minutes
+**Format:** 3 segments with ad breaks
 
 ---
 
-## Slide 1: Title - Why Your Website Matters
+## 🎬 OPENING (0:00 - 3:00)
 
-### Visual
-- Large, bold title: "Why Your Website Is Losing You Clients"
-- Subtitle: "Website Fundamentals for Tattoo Artists"
-- Background: Split screen - bad website example vs. great website example
-- TattooNOW logo in corner
+### Slide 1: Title Card
 
-### Key Points
-- Your website is your 24/7 salesperson
-- First impressions happen in 7 seconds
-- Most artists are losing thousands in bookings due to poor websites
+**Visual:**
+- TattooNOW Weekly Show logo
+- Episode title: "Why Your Website Is Losing You Clients"
+- Guest: Mike DeVries photo and name
+- Episode #1 badge
 
-### Speaker Notes
-Start with impact. Most artists think their Instagram is enough. It's not. Your website is the only platform you truly own and control. While Instagram can shut down tomorrow, your website is yours forever.
+**On-Screen Text:**
+> "83% of clients browse on mobile.
+> Is your website ready?"
 
----
+**Host Script:**
+```
+Welcome to the TattooNOW Weekly Show! I'm excited to kick off our very first
+episode with a topic that affects every single tattoo artist watching: your website.
 
-## Slide 2: The State of Tattoo Artist Websites
+Here's the hard truth—if you're relying only on Instagram to book clients,
+you're leaving money on the table. Your website is your 24/7 salesperson,
+but most artists are doing it completely wrong.
 
-### Visual
-- Statistics overlay on image montage
-- Examples of common bad websites (anonymized)
+Today, we're joined by the incredible Mike DeVries—a master artist who's not
+only built an amazing portfolio but also an amazing business. Mike, thanks for
+being here!
 
-### Key Points
-- 73% of tattoo artists either have no website or a severely outdated one
-- 82% of potential clients check your website before booking
-- Visitors spend an average of 7 seconds deciding if they stay or leave
+[Mike responds]
 
-### Speaker Notes
-The data is clear: you're competing against artists who have professional online presences. If someone is choosing between you and another artist, your website quality can be the deciding factor - even if your art is better.
-
----
-
-## Slide 3: The Client Journey Online
-
-### Visual
-- Flowchart showing: Instagram → Google Search → Website → Booking
-- Conversion drop-off percentages at each stage
-
-### Key Points
-1. Client sees your work on Instagram (100 people)
-2. Interested clients Google your name (40 people)
-3. Visit your website (30 people)
-4. Actually book with you (3-5 people)
-
-### Speaker Notes
-This is where most artists lose bookings. The conversion from website visit to actual booking should be 20-30%, but for most artists it's under 10%. Why? Because their website doesn't do its job.
+Let's dive in. We're going to cover the three biggest mistakes that cost artists
+thousands in lost bookings, and more importantly, how to fix them.
+```
 
 ---
 
-## Slide 4: What Your Website MUST Do
-
-### Visual
-- Checklist graphic with icons
-- Green checkmarks for essentials
-
-### Key Points
-1. ✓ Load fast (under 3 seconds)
-2. ✓ Work perfectly on mobile
-3. ✓ Showcase your best work clearly
-4. ✓ Make booking dead simple
-5. ✓ Build trust immediately
-6. ✓ Appear professional
-
-### Speaker Notes
-Your website has ONE job: turn visitors into booked clients. Everything else is secondary. If your website doesn't accomplish these six things, you're actively losing money every single day.
+## 📺 AD BREAK 1 (3:00 - 4:00)
+**TattooNOW Platform**
+"Your all-in-one business system for tattoo artists"
 
 ---
 
-## Slide 5: Common Website Mistakes (THE BIG ONES)
+## 📱 SEGMENT 1: The Mobile-First Reality (4:00 - 14:00)
 
-### Visual
-- Red X's over screenshots of bad examples
-- Each mistake shown visually
+### Slide 2: Mobile Usage Stats
 
-### Key Points
-❌ **Mistake #1:** Auto-play music or videos
-❌ **Mistake #2:** Splash pages that delay entry
-❌ **Mistake #3:** Flash or outdated technology
-❌ **Mistake #4:** No clear call-to-action
-❌ **Mistake #5:** Hidden contact information
-❌ **Mistake #6:** Terrible mobile experience
-❌ **Mistake #7:** Slow loading (5+ seconds)
+**Visual:**
+- Large stat graphics
+- Smartphone illustration with website examples
+- Progress bar showing 83% highlighted
 
-### Speaker Notes
-Go through each one with examples. These aren't small issues - each one can cost you 50%+ of your potential bookings. Auto-play anything? Instant leave. Can't find how to book? They go to your competitor.
+**On-Screen Stats:**
+- **83%** of potential clients browse on mobile
+- **7 seconds** to make a first impression
+- **3 seconds** maximum load time
+- **80%** abandon slow sites
 
----
+**Speaker Notes:**
+```
+Let's start with the biggest issue: mobile.
 
-## Slide 6: Mobile-First Design Is NOT Optional
+[Show this slide]
 
-### Visual
-- Split screen: desktop view vs. mobile view
-- Statistics about mobile usage
+Mike, when did you realize that mobile optimization was make-or-break for your business?
 
-### Key Points
-- **83% of tattoo clients browse on mobile devices**
-- Google ranks mobile-friendly sites higher
-- Mobile users have 5x higher booking intent
-- Your site must be designed for mobile FIRST
+[Mike discusses mobile importance]
 
-### Speaker Notes
-This is the most important slide in the deck. If your website doesn't work perfectly on a phone, you've already lost 8 out of 10 potential clients. Show examples of mobile-responsive design.
+Exactly. Look at these numbers—83% of people researching tattoo artists are doing it
+on their phone. Not a laptop, not a desktop computer—their phone.
+```
 
 ---
 
-## Slide 7: The 7-Second First Impression Test
+### Slide 3: The 7-Second Test
 
-### Visual
-- Timer countdown graphic
-- Eye-tracking heat map example
+**Visual:**
+- Countdown timer graphic: 7... 6... 5...
+- Split screen: visitor's perspective vs. what they're thinking
+- Three key questions overlay
 
-### Key Points
-In 7 seconds, visitors decide:
+**On-Screen Text:**
+> **In 7 seconds, visitors decide:**
+> 1. Are you professional?
+> 2. Can you do what I want?
+> 3. How do I book?
+
+**Speaker Notes:**
+```
+Here's what's crazy: you have 7 seconds. That's it. In those 7 seconds, someone on
+your site will decide:
 1. Are you professional?
 2. Can you do what I want?
-3. Can I afford you?
-4. How do I book?
+3. How do I book with you?
 
-### Speaker Notes
-Run through the test. What do people see in the first 7 seconds on your site? Is it your best work? Is it a clear headline? Is there a "Book Now" button? Or is it a wall of text and loading spinner?
-
----
-
-## Slide 8: Your Homepage: The Money Page
-
-### Visual
-- Annotated screenshot of a great homepage
-- Arrows pointing to key elements
-
-### Key Points
-Essential homepage elements:
-- Hero section with your best work
-- Clear headline (who you are, what you do)
-- Prominent "Book Consultation" button
-- Portfolio preview (3-6 standout pieces)
-- Social proof (testimonials, awards)
-- Clear navigation
-
-### Speaker Notes
-Your homepage is like a storefront window. You have seconds to grab attention and guide them where you want them to go. Every element should support the goal: get them to book.
+If they can't answer those questions immediately, they're gone. They're clicking
+over to the next artist.
+```
 
 ---
 
-## Slide 9: Portfolio Gallery Mistakes
+### Slide 4: Mobile Design Principles
 
-### Visual
-- Before/After comparison of portfolio pages
-- Good vs. Bad examples
+**Visual:**
+- Smartphone mockup showing good vs. bad design
+- Finger/thumb touch zones illustrated
+- Before/After comparison
 
-### Key Points
-**DON'T:**
-- Use tiny thumbnails
-- Mix all styles together
-- Show every tattoo you've ever done
-- Use slow-loading galleries
-- Hide images behind password protection
+**On-Screen Checklist:**
+- ✓ Large, tappable buttons (44px minimum)
+- ✓ Readable text without zooming (16px+)
+- ✓ One-click access to booking
+- ✓ Fast-loading portfolio images
+- ✓ Simple navigation
 
-**DO:**
-- Use high-quality, optimized images
-- Organize by style/category
-- Show your BEST work only
-- Include context (size, placement, hours)
-- Make images easily shareable
+**Speaker Notes:**
+```
+Mike, walk us through what makes a great mobile experience.
 
-### Speaker Notes
-Your portfolio is why they're here, but most artists present it terribly. Quality over quantity. 20 incredible tattoos beat 200 mediocre ones.
+[Mike discusses mobile design]
 
----
-
-## Slide 10: Portfolio Organization Strategies
-
-### Visual
-- Examples of different organization methods
-- Category tabs/filters demonstration
-
-### Key Points
-Organize by:
-- **Style** (realism, traditional, black & grey, etc.)
-- **Placement** (sleeve, back piece, portrait, etc.)
-- **Theme** (animals, portraits, nature, etc.)
-- **Size** (small, medium, large projects)
-
-### Speaker Notes
-Make it easy for clients to see examples of what THEY want. If someone wants a black & grey sleeve, they shouldn't have to scroll through 100 color pieces to find examples.
+Perfect. The key takeaways here:
+- Large, tappable buttons (your fingers aren't a mouse cursor)
+- Readable text without zooming
+- Portfolio images that look amazing on a small screen
+- One-click access to your booking page
+```
 
 ---
 
-## Slide 11: Image Optimization (Technical but Critical)
+### Slide 5: Before/After Examples
 
-### Visual
-- File size comparison
-- Loading speed impact chart
+**Visual:**
+- Split screen comparison
+- LEFT: Bad mobile site (cluttered, slow, tiny text)
+- RIGHT: Optimized mobile site (clean, fast, clear CTA)
+- Load time comparison: 8 sec vs 2 sec
 
-### Key Points
-- Large image files = slow site = lost clients
-- Optimize images to 100-300KB each
-- Use modern formats (WebP when possible)
-- Lazy loading for below-the-fold images
-- Target: Total page load under 3 seconds
+**On-Screen Metrics:**
 
-### Speaker Notes
-Technical but absolutely critical. A portfolio page with 50 un-optimized images might take 30 seconds to load. Your potential client is gone in 5 seconds. Tools like TinyPNG or ImageOptim make this easy.
+**BEFORE:**
+- 8 second load time
+- Tiny unreadable text
+- Buried booking button
+- Bounce rate: 78%
 
----
+**AFTER:**
+- 2 second load time
+- Thumb-friendly design
+- Prominent "Book Now" CTA
+- Bounce rate: 32%
 
-## Slide 12: The Perfect Portfolio Gallery
+**Speaker Notes:**
+```
+Look at these before and after examples. The 'before' site? It takes 8 seconds to
+load, you can't read anything without zooming, and the booking button is buried.
 
-### Visual
-- Live example of an excellent portfolio gallery
-- Interactive features highlighted
+The 'after' site? Loads in 2 seconds, everything is thumb-friendly, and there's a
+'Book Now' button right at the top.
 
-### Key Points
-Perfect gallery features:
-✓ Grid layout, 3-4 columns on desktop
-✓ Masonry style (Pinterest-like) or uniform
-✓ Click to enlarge (lightbox)
-✓ Swipe-friendly on mobile
-✓ Categories/filters
-✓ Brief captions with details
-✓ Share buttons
-
-### Speaker Notes
-Walk through a real example. Show how it works on mobile. Emphasize the user experience - make it effortless to browse your work.
+Which one do you think gets more bookings? It's not even close.
+```
 
 ---
 
-## Slide 13: About Page: Building Trust
-
-### Visual
-- Example of a compelling About page
-- Elements highlighted
-
-### Key Points
-Your About page should include:
-- Professional photo of you
-- Your story and background
-- Years of experience
-- Specialties and style focus
-- Awards and recognition
-- Why you do what you do
-- Studio location and environment
-
-### Speaker Notes
-People book with people they trust. Your About page humanizes you and builds that trust. Don't skip this - it's often the 2nd most visited page after your portfolio.
+## 📺 AD BREAK 2 (14:00 - 15:00)
+**TattooNOW Website Builder**
+"Professional websites in minutes, not months"
 
 ---
 
-## Slide 14: The Booking Funnel
+## 🎨 SEGMENT 2: Your Portfolio - Quality Over Quantity (15:00 - 25:00)
 
-### Visual
-- Funnel diagram showing the conversion path
-- Drop-off points highlighted
+### Slide 6: Portfolio Mistakes
 
-### Key Points
-The path to a booking:
-1. **Land on site** (100 visitors)
-2. **Browse portfolio** (70 stay)
-3. **Decide to book** (30 decide)
-4. **Find booking page** (20 find it)
-5. **Complete form** (10 start)
-6. **Actually submit** (5 complete)
+**Visual:**
+- Examples of overcrowded portfolio pages
+- Red X's over common mistakes
+- Quality vs. Quantity scale
 
-### Speaker Notes
-Every step loses people. Your job is to remove friction at each stage. Make the path from "I like this work" to "I've submitted my booking request" as smooth as possible.
+**Common Mistakes:**
+- ❌ Showing every tattoo you've ever done (200+ images)
+- ❌ No organization or categories
+- ❌ Mixing quality levels
+- ❌ Unoptimized 5MB images
+- ❌ No context (size, placement, time)
 
----
+**On-Screen Text:**
+> "Show your best 20-30 pieces, not all 200."
 
-## Slide 15: Call-to-Action (CTA) Placement
+**Speaker Notes:**
+```
+Now let's talk about your portfolio—the main reason people visit your website.
 
-### Visual
-- Heatmap showing where users look
-- Examples of CTA button placement
+Mike, what's the biggest portfolio mistake you see artists making?
 
-### Key Points
-- CTA buttons should appear:
-  - Above the fold on homepage
-  - In the main navigation
-  - At the end of portfolio
-  - On the About page
-  - In the footer
-- Use action words: "Book Consultation", "Request Quote", "Check Availability"
-- Make buttons stand out visually (contrast color)
+[Mike discusses common mistakes]
 
-### Speaker Notes
-If someone wants to book and can't immediately figure out how, they're gone. Your "Book Now" or "Request Consultation" button should be visible on EVERY page without scrolling.
+Yes! I see this all the time. Artists think they need to show EVERYTHING. Every single
+tattoo they've ever done. But that actually hurts you.
+
+Here's why: when a potential client sees 200 tattoos of varying quality, they remember
+the mediocre ones just as much as the great ones. But if they see your best 20-30 pieces?
+Those stick.
+```
 
 ---
 
-## Slide 16: The Booking Page Essentials
+### Slide 7: Organization Strategy
 
-### Visual
-- Example of an effective booking form
-- Annotated with best practices
+**Visual:**
+- Portfolio grid with clear categories
+- Filter/tab interface examples
+- Client journey flow diagram
 
-### Key Points
-Keep booking forms:
-- **Simple** (only ask essential questions)
-- **Clear** (explain what happens next)
-- **Fast** (minimal fields required)
-- **Mobile-friendly** (large buttons, easy typing)
-- **Reassuring** (privacy note, response time)
+**Organization Methods:**
 
-Essential fields:
-- Name
-- Email
-- Phone
-- Tattoo idea description
+**By Style:**
+- Realism
+- Traditional
+- Black & Grey
+- Watercolor
+
+**By Placement:**
+- Sleeves
+- Back Pieces
+- Small Work
+- Portraits
+
+**By Theme:**
+- Portraits
+- Animals/Nature
+- Geometric
+- Lettering
+
+**Speaker Notes:**
+```
+Organization is critical. If someone wants a black and grey realism piece, they shouldn't
+have to scroll through 50 color traditional tattoos to find examples.
+
+Categories matter:
+- Style (realism, traditional, black & grey, etc.)
+- Placement (sleeve, back piece, small work)
+- Theme (portraits, animals, floral, etc.)
+
+Make it easy for them to see: 'Yes, this artist can definitely do what I want.'
+```
+
+---
+
+### Slide 8: Image Optimization
+
+**Visual:**
+- File size comparison chart
+- Loading speed impact graph
+- Before/After image quality at different compression levels
+
+**On-Screen Data:**
+
+**Unoptimized:**
+- 5MB per image
+- 30 second page load
+- 85% visitor bounce
+
+**Optimized:**
+- 150KB per image
+- 2 second page load
+- 28% visitor bounce
+
+**Tools:**
+- TinyPNG
+- ImageOptim
+- Squoosh
+
+**Speaker Notes:**
+```
+Technical but super important: image optimization. If each portfolio photo is 5MB,
+your page will take 30 seconds to load on mobile. Your client is gone in 5 seconds.
+
+Compress your images. Tools like TinyPNG make this easy. Get each image down to
+100-300KB without losing visible quality.
+
+Mike, how do you approach curating your online portfolio?
+
+[Mike shares his approach]
+```
+
+---
+
+## 📺 AD BREAK 3 (25:00 - 26:00)
+**TattooNOW Booking System**
+"Automate your bookings and get paid faster"
+
+---
+
+## 🎯 SEGMENT 3: The Booking Funnel - Remove All Friction (26:00 - 36:00)
+
+### Slide 9: The Booking Funnel
+
+**Visual:**
+- Funnel diagram with drop-off percentages
+- Animated flow from top to bottom
+- Leak/crack graphics showing where clients are lost
+
+**The Funnel:**
+```
+100 visitors land on site
+  ↓ 70% stay
+70 browse portfolio
+  ↓ 43% decide to book
+30 want to book
+  ↓ 67% find booking page
+20 find the booking page
+  ↓ 50% start form
+10 start the booking form
+  ↓ 50% complete
+5 actually book
+```
+
+**Conversion Rate: 5%** ⚠️
+**Goal: 20-30%** ✓
+
+**Speaker Notes:**
+```
+Final segment: let's talk about the booking funnel—getting people from 'I like this
+work' to 'I've booked my appointment.'
+
+This is where most artists hemorrhage potential clients. Look at this funnel:
+- 100 people visit your site
+- 70 browse your portfolio
+- 30 decide they want to book
+- 20 can actually FIND your booking page
+- 10 start the form
+- 5 complete it
+
+We're losing people at every step. Your job is to remove friction.
+```
+
+---
+
+### Slide 10: CTA Placement
+
+**Visual:**
+- Website layout with highlighted CTA button locations
+- Heat map showing user attention
+- Multiple page examples with CTAs circled
+
+**CTA Button Placement:**
+- ✓ Main navigation (top right)
+- ✓ Hero section (above fold)
+- ✓ End of portfolio
+- ✓ About page
+- ✓ Footer (every page)
+
+**Button Text Options:**
+- "Book Consultation"
+- "Request Quote"
+- "Check Availability"
+- "Start Your Tattoo"
+
+**Speaker Notes:**
+```
+First: your Call-To-Action needs to be obvious. 'Book Consultation' or 'Request Quote'
+buttons should be:
+- In your main navigation
+- Above the fold on your homepage
+- At the end of your portfolio
+- In your footer
+
+Every. Single. Page.
+
+If someone's ready to book and can't immediately figure out how, they'll bounce.
+
+Mike, how has streamlining your booking process impacted your business?
+
+[Mike discusses booking improvements]
+```
+
+---
+
+### Slide 11: Form Optimization
+
+**Visual:**
+- Side-by-side form comparison: Complex (14 fields) vs. Simple (7 fields)
+- Completion rate graph
+- Automated email confirmation example
+
+**The Perfect Booking Form:**
+
+**Essential Fields ONLY:**
+1. Name
+2. Email
+3. Phone
+4. Tattoo idea (brief description)
+5. Placement (arm, back, etc.)
+6. Approximate size
+7. Budget range (optional)
+
+**Friction Reducers:**
+- ✓ Automated confirmation email
+- ✓ Clear response timeline ("We'll reply within 24 hours")
+- ✓ Online deposit payment option
+- ✓ Calendar availability preview
+
+**Impact:**
+- Each extra field = -10% completion rate
+- Automated confirmation = +35% trust
+- Online deposits = -60% no-shows
+
+**Speaker Notes:**
+```
+Exactly. Your booking form should be SIMPLE. Only ask what you absolutely need:
+- Name, Email, Phone
+- Tattoo idea
 - Placement
-- Size estimate
+- Approximate size
 - Budget range (optional but helpful)
-- Preferred dates
 
-### Speaker Notes
-Every additional form field reduces completion rate by 5-10%. Only ask what you absolutely need to qualify the lead and start the conversation.
+That's it. Don't ask for their life story. Every extra field you add reduces completion
+rate by 10%.
 
----
+And here's the magic: automated confirmation emails. As soon as they submit, they get an
+email saying 'Got it! We'll respond within 24 hours.' This builds trust and reduces anxiety.
 
-## Slide 17: Post-Submission Experience
+Even better? Let them pay a deposit online right when they book. This secures the
+appointment and massively reduces no-shows.
 
-### Visual
-- Example confirmation page
-- Automated email example
-
-### Key Points
-After they submit, immediately:
-1. Show confirmation message
-2. Tell them what happens next
-3. Give timeline for response
-4. Send automated confirmation email
-5. Add to your CRM or list
-6. Actually respond within 24 hours
-
-### Speaker Notes
-The experience doesn't end at submission. Many artists lose bookings because they don't respond quickly or the client isn't sure if their form went through. Automate the confirmation, then follow up personally.
+The easier you make it to book with you, the more bookings you'll get. It's that simple.
+```
 
 ---
 
-## Slide 18: Mobile-First Design Principles
+## 🎬 CLOSING (36:00 - 40:00)
 
-### Visual
-- Side-by-side: desktop vs. mobile layouts
-- Touch target sizing examples
+### Slide 12: Action Plan + CTA
 
-### Key Points
-Mobile design essentials:
-- Large, tappable buttons (minimum 44x44 pixels)
-- Readable text (16px minimum)
-- Simple navigation (hamburger menu)
-- Fast loading (3G connection consideration)
-- Thumb-friendly interactions
-- No hover states (use tap instead)
+**Visual:**
+- Checklist graphic
+- Next episode teaser card
+- Social media handles and QR codes
 
-### Speaker Notes
-Design for the smallest screen first, then scale up. This forces you to prioritize what really matters. Test your site on an actual phone, not just a browser's mobile view.
+**This Week's Action Plan:**
 
----
+**✓ Mobile Test**
+Pull out your phone and visit your website. Can you book in under 30 seconds?
 
-## Slide 19: Speed Optimization Quick Wins
+**✓ Portfolio Audit**
+Keep only your best 20-30 pieces, organize by style
 
-### Visual
-- Before/After loading speed comparison
-- Impact on bounce rate graph
+**✓ Add CTAs**
+Put a "Book Now" button on every single page
 
-### Key Points
-Make your site faster:
-- Compress all images
-- Use a CDN (Content Delivery Network)
-- Minify CSS and JavaScript
-- Enable browser caching
-- Remove unnecessary plugins
-- Choose fast hosting
-- Use lazy loading
+**Next Week:**
+Episode 2: Pricing Psychology
+feat. Nikko Hurtado
 
-Target: Under 3 seconds on 3G mobile
+**Resources:**
+- Download: Website Audit Checklist
+- Join: tattoonow.com
+- Follow: @tattoonow
 
-### Speaker Notes
-Google and users both penalize slow sites. Every second of delay reduces conversions by 7%. Going from 5 seconds to 2 seconds can literally double your booking rate.
+**Speaker Notes:**
+```
+Mike, before we wrap up—what's the one thing you'd tell an artist who's just starting
+to think about their website?
 
----
+[Mike gives final advice]
 
-## Slide 20: Navigation Best Practices
+Perfect advice. Here's your action plan for this week:
 
-### Visual
-- Examples of good navigation structures
-- Mobile navigation patterns
+1. Pull out your phone and visit your website. Does it work perfectly? Can you book
+   in under 30 seconds?
+2. Audit your portfolio—keep only your best 20-30 pieces, organize by style
+3. Add a 'Book Now' button to every single page if you don't have one
 
-### Key Points
-Keep navigation:
-- **Simple** (5-7 main menu items max)
-- **Clear** (descriptive labels, no jargon)
-- **Consistent** (same on every page)
-- **Visible** (sticky header or easy to access)
+Do those three things and you'll already be ahead of 90% of artists.
 
-Typical structure:
-- Home
-- Portfolio (with sub-categories)
-- About
-- Booking / Contact
-- FAQ
-- Instagram / Social
+Thank you to Mike DeVries for joining us. Check out his work at mdtattoostudio.com
+and follow @mdtattoostudio on Instagram.
 
-### Speaker Notes
-Don't get creative with navigation. Use standard patterns that people are familiar with. Your creativity belongs in your art, not in making people hunt for your booking page.
+Next week: we're tackling pricing psychology—how to price your work for profitability
+without losing clients. You won't want to miss it.
+
+If you found this valuable, subscribe to our newsletter at tattoonow.com for more
+resources, and share this episode with another artist who needs to hear it.
+
+Thanks for watching, and we'll see you next week!
+```
 
 ---
 
-## Slide 21: Social Proof & Trust Signals
-
-### Visual
-- Examples of trust elements on websites
-- Social proof placement examples
-
-### Key Points
-Build trust with:
-- Client testimonials (with photos)
-- 5-star reviews
-- Awards and recognition
-- Press mentions / features
-- Instagram follower count
-- Years in business
-- Convention appearances
-- Celebrity client name-drops (if applicable)
-
-### Speaker Notes
-Social proof is CRITICAL for converting visitors. People want reassurance that you're legit and that others have had great experiences. Display this prominently.
-
----
-
-## Slide 22: Testimonials That Convert
-
-### Visual
-- Good vs. bad testimonial examples
-- Optimal placement on page
-
-### Key Points
-Effective testimonials:
-- Include client's first name and photo (with permission)
-- Specific (not just "Great work!")
-- Address common concerns
-- Include before/after if possible
-- 2-3 sentences ideal
-- Placed strategically throughout site
-
-Example: "I was nervous about my first tattoo, but Sarah made me feel completely comfortable. The consultation was thorough, she answered all my questions, and the final piece exceeded my expectations. Can't wait for my next one!" - Emily R.
-
-### Speaker Notes
-Generic praise doesn't work. Specific testimonials that tell a story and address objections (pain, fear, quality concerns) are what convert hesitant visitors into booked clients.
-
----
-
-## Slide 23: Pricing Information: To Display or Not?
-
-### Visual
-- Poll results or debate-style graphic
-- Examples of pricing presentation
-
-### Key Points
-**The debate:**
-- **Show pricing:** Qualifies leads, sets expectations, saves time
-- **Hide pricing:** Avoids lowballers, allows custom quotes, maintains flexibility
-
-**Best practice:**
-- Show price RANGES ("Small pieces start at $X")
-- Minimum deposit amount
-- Hourly rate or day rate
-- "Contact for custom quote" for large projects
-
-### Speaker Notes
-This is controversial, but data shows that some pricing guidance actually increases qualified bookings. You don't need to list every price, but giving a ballpark helps serious clients and filters out those who can't afford you.
-
----
-
-## Slide 24: Booking Conversion Optimization
-
-### Visual
-- A/B testing examples
-- Conversion rate improvements chart
-
-### Key Points
-Test and optimize:
-- CTA button color and text
-- Form length and fields
-- Page layouts
-- Image selection
-- Trust signal placement
-- Response times
-
-Track:
-- Visitors to booking page
-- Form starts
-- Form completions
-- Actual bookings
-
-### Speaker Notes
-Treat your website like a living thing. Small changes can have huge impacts. Changing a button from "Submit" to "Request My Consultation" increased bookings by 23% for one artist we worked with.
-
----
-
-## Slide 25: SEO Basics (Getting Found on Google)
-
-### Visual
-- Google search results page example
-- Local pack highlighting
-
-### Key Points
-Essential SEO:
-- Google Business Profile (claim and optimize)
-- Location-based keywords ("tattoo artist in [city]")
-- Alt text on all images
-- Fast loading speed
-- Mobile-friendly
-- Regular content updates (blog/news)
-- Quality backlinks
-- Client reviews on Google
-
-### Speaker Notes
-SEO seems complicated, but basics are simple. Optimize for your city + style. "Realism tattoo artist Los Angeles" vs. just "tattoo artist". Local SEO is where most tattoo artists win or lose.
-
----
-
-## Slide 26: Google Business Profile Optimization
-
-### Visual
-- Optimized Google Business Profile example
-- Elements highlighted
-
-### Key Points
-Optimize your GBP:
-- Complete every section
-- Choose correct categories
-- Add 10+ high-quality photos
-- Get regular 5-star reviews
-- Post weekly updates
-- Respond to all reviews
-- Add booking link
-- List services offered
-
-### Speaker Notes
-Google Business Profile is FREE and one of the highest ROI marketing tools available. A well-optimized profile can get you ranking #1 in local search, which drives massive traffic to your website.
-
----
-
-## Slide 27: Content Strategy: Blogging for Artists
-
-### Visual
-- Blog post examples
-- Traffic growth chart
-
-### Key Points
-Why blog:
-- Improves SEO (more pages to rank)
-- Establishes expertise
-- Answers common questions
-- Drives organic traffic
-- Gives newsletter content
-
-Blog topics:
-- Tattoo aftercare guides
-- Style deep-dives
-- Behind-the-scenes process
-- Client stories (with permission)
-- Industry trends
-- FAQ answers
-
-### Speaker Notes
-You don't need to blog daily, but 1-2 quality posts per month can significantly boost your SEO and provide value to potential clients. Repurpose Instagram captions into blog posts.
-
----
-
-## Slide 28: Website Platforms: What to Use
-
-### Visual
-- Platform comparison chart
-- Pros/cons for each
-
-### Key Points
-Popular platforms:
-- **Squarespace** - Beautiful templates, easy to use, great for artists
-- **WordPress** - Unlimited customization, steeper learning curve
-- **Wix** - Very beginner-friendly, some limitations
-- **Shopify** - If selling products/merch
-- **Custom** - Expensive, complete control
-
-**Recommendation:** Start with Squarespace or WordPress
-
-### Speaker Notes
-Don't overcomplicate this. Squarespace is perfect for most tattoo artists - professional templates, mobile-responsive, easy to update yourself. WordPress if you want more control or plan to blog heavily.
-
----
-
-## Slide 29: Integration & Automation
-
-### Visual
-- Integration workflow diagram
-- Connected tools illustration
-
-### Key Points
-Connect your website to:
-- Booking system (Acuity, Calendly, etc.)
-- Email marketing (Mailchimp, ConvertKit)
-- Payment processing (Stripe, Square)
-- Social media (auto-post)
-- CRM (client management)
-- Review collection tools
-
-### Speaker Notes
-Your website should be the hub that connects all your business tools. When someone books, they should automatically go into your email list, get added to your calendar, and receive confirmation - all without you touching anything.
-
----
-
-## Slide 30: Action Plan - Your Next Steps
-
-### Visual
-- Checklist with timeline
-- Priority ranking
-
-### Key Points
-**This Week:**
-- [ ] Audit your current site (or admit you need one)
-- [ ] Test your site on mobile
-- [ ] Check your loading speed
-- [ ] Make sure booking is easy to find
-
-**This Month:**
-- [ ] Update portfolio with best 20-30 pieces
-- [ ] Add clear CTAs to every page
-- [ ] Optimize all images
-- [ ] Set up Google Business Profile
-
-**This Quarter:**
-- [ ] Full website redesign if needed
-- [ ] Implement booking automation
-- [ ] Create content strategy
-- [ ] A/B test for optimization
-
-### Speaker Notes
-End with actionable steps. Don't let this be inspiration without action. The artists who implement these fundamentals see 2-3x more bookings from their online presence within 90 days.
-
----
-
-## Bonus Slide: Resources & Tools
-
-### Visual
-- List of tools with logos
-- QR code to resource page
-
-### Key Points
-**Free Tools:**
-- Google PageSpeed Insights (speed testing)
-- Google Business Profile
-- TinyPNG (image compression)
-- Canva (graphics)
-- Google Analytics (tracking)
-
-**Paid Tools:**
-- Squarespace ($16-49/month)
-- Acuity Scheduling ($16-61/month)
-- ConvertKit (email - $29+/month)
-
-**TattooNOW Members Get:**
-- Website template library
-- Pre-written copy templates
-- Image optimization service
-- Monthly office hours for Q&A
-
-### Speaker Notes
-Share the resource links. Make implementation as easy as possible. Most of the tools mentioned have free trials or free tiers to start with.
-
----
-
-**END OF PRESENTATION**
-
-Total Slides: 30
-Estimated Presentation Time: 35-40 minutes with discussion
-Target Audience: Tattoo artists of all levels
-Presentation Style: Visual-heavy with real examples, interactive discussion encouraged
+## 📊 Episode Summary
+
+**Total Slides:** 12 (including title and closing)
+**Runtime:** 40 minutes
+**Segments:** 3 main teaching segments
+**Ad Breaks:** 3 (1 minute each)
+
+**Slide Breakdown:**
+- Slide 1: Title/Opening (3 min)
+- Slides 2-5: Segment 1 - Mobile (10 min)
+- Slides 6-8: Segment 2 - Portfolio (10 min)
+- Slides 9-11: Segment 3 - Booking (10 min)
+- Slide 12: Closing/CTA (4 min)
+
+**Guest:** Mike DeVries (@mdtattoostudio)
+**Resources:** Website Audit Checklist
+**Next Episode:** Pricing Psychology feat. Nikko Hurtado

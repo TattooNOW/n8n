@@ -89,10 +89,10 @@ node scripts/generate-script.js --data sample/episode-X.json
 - Create any custom graphics needed
 
 ### 6. Production
-- Share script with host and guest
+- Share script and presentation with host and guest
 - Prepare technical setup (cameras, lighting, audio)
 - Record episode following script structure
-- Capture all segments (50 min total)
+- Capture all segments (40 min total)
 
 ### 7. Post-Production
 - Edit video (transitions, graphics, captions)
@@ -139,19 +139,29 @@ Four core presentations that episodes draw from:
 
 ### Presentation Format
 
-Presentations are written in Markdown with structure:
-```markdown
-## Slide X: Title
+Presentations integrate the **run of show** directly into the slide deck. Each presentation includes:
+- Timing markers for each segment
+- Ad break indicators
+- Visual descriptions for each slide
+- On-screen text and graphics specs
+- Complete speaker notes/scripts
+- Episode summary
 
-### Visual
+Structure:
+```markdown
+## 🎬 SEGMENT NAME (Time Range)
+
+### Slide X: Slide Title
+
+**Visual:**
 [Description of what's shown on screen]
 
-### Key Points
-- Bullet point 1
-- Bullet point 2
+**On-Screen Text/Stats:**
+- Key data points
+- Bullet points
 
-### Speaker Notes
-[Detailed talking points and examples]
+**Speaker Notes:**
+[Complete talking points and script]
 ```
 
 ## 📅 Content Calendar
@@ -198,28 +208,31 @@ Episodes cycle through these categories to ensure balanced coverage:
 
 | Segment | Time | Duration | Purpose |
 |---------|------|----------|---------|
-| Opening | 0:00 - 2:00 | 2 min | Hook and introduce topic |
-| Introduction | 2:00 - 5:00 | 3 min | Introduce guest and establish credibility |
-| Segment 1 | 5:00 - 15:00 | 10 min | First major topic |
-| Segment 2 | 15:00 - 25:00 | 10 min | Second major topic |
-| Segment 3 | 25:00 - 35:00 | 10 min | Third major topic |
-| Q&A | 35:00 - 45:00 | 10 min | Rapid-fire questions and discussion |
-| Closing | 45:00 - 50:00 | 5 min | Recap, CTAs, next week preview |
+| Opening | 0:00 - 3:00 | 3 min | Hook, introduce topic and guest |
+| Ad Break 1 | 3:00 - 4:00 | 1 min | Sponsor/product message |
+| Segment 1 | 4:00 - 14:00 | 10 min | First major topic (2-4 slides) |
+| Ad Break 2 | 14:00 - 15:00 | 1 min | Sponsor/product message |
+| Segment 2 | 15:00 - 25:00 | 10 min | Second major topic (2-4 slides) |
+| Ad Break 3 | 25:00 - 26:00 | 1 min | Sponsor/product message |
+| Segment 3 | 26:00 - 36:00 | 10 min | Third major topic (2-4 slides) |
+| Closing | 36:00 - 40:00 | 4 min | Recap, action plan, CTAs, next week preview |
 
-**Total: 50 minutes**
+**Total: 40 minutes**
+**Slides per episode: 10-14 slides** (including title and closing)
 
 ### Required Content Components
 
 Every episode includes:
-- ✅ Episode metadata (number, title, date, season)
+- ✅ Episode metadata (number, title, date, duration)
 - ✅ Guest information (name, title, bio, social, website)
-- ✅ Episode description and key topics
-- ✅ Presentation deck references (which slides)
-- ✅ Scripts for all 7 segments
+- ✅ Opening script (3 min)
+- ✅ 3 segment scripts with slide references (10 min each)
+- ✅ 3 ad break placeholders
+- ✅ Closing script with action plan (4 min)
+- ✅ Presentation deck (10-14 slides total)
 - ✅ Production notes (technical setup)
 - ✅ Social media assets (YouTube, Instagram, LinkedIn)
 - ✅ Newsletter topic and CTA
-- ✅ Meeting focus for TattooNOW members
 
 ## 🤖 AI-Assisted Content Creation
 

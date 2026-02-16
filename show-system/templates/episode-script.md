@@ -1,159 +1,118 @@
-# TattooNOW Weekly Show - Episode {{EPISODE_NUMBER}}
+# TattooNOW Weekly Show - Episode {{EPISODE_NUMBER}}: {{EPISODE_TITLE}}
 
 ## Episode Information
+- **Episode:** {{EPISODE_NUMBER}}
 - **Title:** {{EPISODE_TITLE}}
 - **Air Date:** {{AIR_DATE}}
-- **Season:** {{SEASON}}
-- **Episode:** {{EPISODE_NUMBER}}
 - **Duration:** {{DURATION}} minutes
-- **Host:** {{HOST_NAME}}
-
-## Guest Information
-- **Guest Name:** {{GUEST_NAME}}
-- **Guest Title:** {{GUEST_TITLE}}
-- **Guest Bio:** {{GUEST_BIO}}
-- **Instagram:** @{{GUEST_INSTAGRAM}}
-- **Website:** {{GUEST_WEBSITE}}
-
-## Episode Overview
-{{EPISODE_DESCRIPTION}}
-
-## Key Topics
-{{KEY_TOPICS}}
-
-## Presentation Deck
-**Presentation:** {{PRESENTATION_NAME}} ({{PRESENTATION_ID}})
-**Slides Referenced:**
-{{SLIDES_LIST}}
+- **Guest:** {{GUEST_NAME}} - {{GUEST_TITLE}}
 
 ## Show Structure
 
-### Opening (0:00 - 2:00)
-**Visual:** TattooNOW logo + Episode title card
+### OPENING (0:00 - 3:00)
+**Slide 1: Title Card**
+- TattooNOW logo + Episode title
+- Guest name and photo
 
-**Script:**
-```
+**Host Script:**
 {{OPENING_SCRIPT}}
-```
 
-### Introduction (2:00 - 5:00)
-**Visual:** Guest intro slide + Portfolio clips
+---
 
-**Script:**
-```
-{{INTRO_SCRIPT}}
-```
+### AD BREAK 1 (3:00 - 4:00)
+**Sponsor/Product:** {{AD_BREAK_1}}
 
-### Main Content (5:00 - 35:00)
+---
 
-#### Segment 1: {{SEGMENT_1_TITLE}} (5:00 - 15:00)
+### SEGMENT 1: {{SEGMENT_1_TITLE}} (4:00 - 14:00)
+
 **Slides:** {{SEGMENT_1_SLIDES}}
 
 **Key Points:**
 {{SEGMENT_1_POINTS}}
 
-**Script:**
-```
+**Discussion Script:**
 {{SEGMENT_1_SCRIPT}}
-```
 
-#### Segment 2: {{SEGMENT_2_TITLE}} (15:00 - 25:00)
+---
+
+### AD BREAK 2 (14:00 - 15:00)
+**Sponsor/Product:** {{AD_BREAK_2}}
+
+---
+
+### SEGMENT 2: {{SEGMENT_2_TITLE}} (15:00 - 25:00)
+
 **Slides:** {{SEGMENT_2_SLIDES}}
 
 **Key Points:**
 {{SEGMENT_2_POINTS}}
 
-**Script:**
-```
+**Discussion Script:**
 {{SEGMENT_2_SCRIPT}}
-```
 
-#### Segment 3: {{SEGMENT_3_TITLE}} (25:00 - 35:00)
+---
+
+### AD BREAK 3 (25:00 - 26:00)
+**Sponsor/Product:** {{AD_BREAK_3}}
+
+---
+
+### SEGMENT 3: {{SEGMENT_3_TITLE}} (26:00 - 36:00)
+
 **Slides:** {{SEGMENT_3_SLIDES}}
 
 **Key Points:**
 {{SEGMENT_3_POINTS}}
 
-**Script:**
-```
+**Discussion Script:**
 {{SEGMENT_3_SCRIPT}}
-```
 
-### Q&A / Discussion (35:00 - 45:00)
-**Visual:** Discussion slides + Live examples
+---
 
-**Questions:**
-{{QA_QUESTIONS}}
+### CLOSING (36:00 - 40:00)
+**Slide: Call to Action**
 
-**Script:**
-```
-{{QA_SCRIPT}}
-```
-
-### Closing (45:00 - 50:00)
-**Visual:** Call-to-action slides
-
-**Script:**
-```
+**Host Script:**
 {{CLOSING_SCRIPT}}
-```
+
+**Next Week Preview:**
+{{NEXT_WEEK_PREVIEW}}
+
+---
+
+## Guest Information
+- **Name:** {{GUEST_NAME}}
+- **Title:** {{GUEST_TITLE}}
+- **Bio:** {{GUEST_BIO}}
+- **Instagram:** @{{GUEST_INSTAGRAM}}
+- **Website:** {{GUEST_WEBSITE}}
 
 ## Production Notes
-
-### Pre-Production Checklist
-- [ ] Guest confirmed and briefed
-- [ ] Slides prepared and reviewed
-- [ ] Equipment tested
-- [ ] Talking points shared with guest
-- [ ] Social media graphics created
-- [ ] Newsletter draft prepared
 
 ### Technical Setup
 - **Camera:** {{CAMERA_SETUP}}
 - **Lighting:** {{LIGHTING_SETUP}}
 - **Audio:** {{AUDIO_SETUP}}
-- **Recording Software:** {{RECORDING_SOFTWARE}}
 
-### Post-Production Checklist
-- [ ] Edit video (remove gaps, add transitions)
-- [ ] Add intro/outro graphics
-- [ ] Color correction
-- [ ] Audio enhancement
-- [ ] Add captions
-- [ ] Export in multiple formats (YouTube, Instagram, LinkedIn)
-- [ ] Upload to platforms
-- [ ] Schedule newsletter
-- [ ] Promote on social media
+### Social Media Assets
 
-## Social Media Assets
+**YouTube:**
+- Title: {{YOUTUBE_TITLE}}
+- Description: {{YOUTUBE_DESCRIPTION}}
+- Tags: {{YOUTUBE_TAGS}}
 
-### YouTube
-**Title:** {{YOUTUBE_TITLE}}
-**Description:** {{YOUTUBE_DESCRIPTION}}
-**Tags:** {{YOUTUBE_TAGS}}
-**Thumbnail:** {{THUMBNAIL_FILE}}
+**Instagram:**
+- Caption: {{INSTAGRAM_CAPTION}}
+- Hashtags: {{INSTAGRAM_HASHTAGS}}
 
-### Instagram
-**Caption:** {{INSTAGRAM_CAPTION}}
-**Hashtags:** {{INSTAGRAM_HASHTAGS}}
-
-### LinkedIn
-**Post:** {{LINKEDIN_POST}}
+**LinkedIn:**
+- Post: {{LINKEDIN_POST}}
 
 ## Newsletter Integration
-**Newsletter Topic:** {{NEWSLETTER_TOPIC}}
-**Newsletter CTA:** {{NEWSLETTER_CTA}}
-
-## Related Content
-- Previous Episode: {{PREVIOUS_EPISODE}}
-- Next Episode: {{NEXT_EPISODE}}
-- Related Articles: {{RELATED_ARTICLES}}
-- Presentation Deck: {{PRESENTATION_LINK}}
-
-## Meeting Focus
-**This Week's Training:** {{MEETING_FOCUS}}
+- **Topic:** {{NEWSLETTER_TOPIC}}
+- **CTA:** {{NEWSLETTER_CTA}}
 
 ---
 
 **Generated:** {{GENERATION_DATE}}
-**Template Version:** 1.0
