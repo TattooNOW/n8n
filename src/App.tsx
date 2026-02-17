@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Home } from "@/pages/Home";
 import { ArtistSoftware } from "@/pages/ArtistSoftware";
 import { NetworkPreview } from "@/pages/NetworkPreview";
+import { RunOfShow } from "@/pages/RunOfShow";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/artist-software" element={<ArtistSoftware />} />
           <Route path="/network-preview" element={<NetworkPreview />} />
+          <Route path="/run-of-show" element={<RunOfShow />} />
         </Routes>
       </main>
       <Footer />
