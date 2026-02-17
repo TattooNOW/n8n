@@ -1,0 +1,156 @@
+{
+  "EPISODE_NUMBER": 2,
+  "EPISODE_TITLE": "Building Your Digital Empire",
+  "AIR_DATE": "2026-02-27T19:00:00-05:00",
+  "HOST": "Ryan Pierce",
+  "QR_CODE_URL": "https://tattoonow.com/book-consultation",
+  "QR_CODE_MESSAGE": "Book Your Free 15-Min Consultation",
+  "HIGHLEVEL_QR_URL": "https://api.leadconnectorhq.com/qr/abc123",
+  "HIGHLEVEL_CAMPAIGN_NAME": "episode-2-digital-empire",
+
+  "YOUTUBE_DESCRIPTION": "In this episode, we sit down with Marcus \"Digital Ink\" Rodriguez to discuss building an online presence that actually converts followers into paying clients. Plus, insights from our latest TattooNOW blog post on Instagram algorithm changes in 2026.\n\nTopics Covered:\n• Building Your Online Presence as a Tattoo Artist\n• Instagram Marketing & Growth Strategies (2026 Algorithm Updates)\n• Website Design & SEO for Maximum Bookings\n\nGuest: Marcus Rodriguez (@digitalink.tattoos)\nStyle: Neo-Traditional & Illustrative\nLocation: Austin, TX\n\n🎨 Want to be a guest on TattooNOW Weekly?\nApply: https://tattoonow.com/guest-application\n\n📚 Blog Post Mentioned:\n\"Instagram Algorithm Changes in 2026: What Tattoo Artists Need to Know\"\nhttps://tattoonow.com/blog/instagram-algorithm-2026\n\n#TattooArtist #InstagramMarketing #TattooBusinessTips #DigitalMarketing #TattooSEO",
+
+  "FACEBOOK_DESCRIPTION": "🎨 NEW EPISODE ALERT!\n\nJoin us TONIGHT at 7PM EST as we dive deep into digital marketing for tattoo artists with Marcus \"Digital Ink\" Rodriguez!\n\n✅ Instagram growth strategies that actually work\n✅ SEO secrets for tattoo artists\n✅ How Marcus went from 500 to 50K followers in 18 months\n\nPLUS: Insights from our latest blog post on the 2026 Instagram algorithm changes!\n\nWatch live: Facebook.com/TattooNOW",
+
+  "LINKEDIN_DESCRIPTION": "Tattoo artists: Are you leaving money on the table by ignoring your online presence?\n\nIn this week's TattooNOW episode, Marcus Rodriguez shares how he built a 6-figure tattoo business through strategic digital marketing.\n\nKey insights:\n• Instagram algorithm changes in 2026\n• Website optimization for higher conversion rates\n• Email marketing for client retention\n\nWhether you're a solo artist or studio owner, this episode is packed with actionable strategies.\n\nLive tonight, 7PM EST.",
+
+  "SEGMENT_1_TYPE": "interview",
+  "SEGMENT_1_GUEST_NAME": "Marcus Rodriguez",
+  "SEGMENT_1_GUEST_TITLE": "Digital Marketing Expert & Tattoo Artist",
+  "SEGMENT_1_GUEST_STYLE": "Neo-Traditional & Illustrative",
+  "SEGMENT_1_GUEST_LOCATION": "Austin, TX",
+  "SEGMENT_1_GUEST_INSTAGRAM": "digitalink.tattoos",
+  "SEGMENT_1_PORTFOLIO_IMAGES": [
+    {
+      "url": "https://images.unsplash.com/photo-1590246814883-57c511a59f90?w=800",
+      "description": "Neo-traditional phoenix sleeve"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800",
+      "description": "Illustrative nature scene"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1598961942677-86574e2049c4?w=800",
+      "description": "Bold traditional eagle"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1562962230-16a66e891c64?w=800",
+      "description": "Geometric mandala half-sleeve"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800",
+      "description": "Neo-traditional rose and dagger"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1616164744055-63e1b3a6e5c6?w=800",
+      "description": "Black and grey portrait"
+    }
+  ],
+  "SEGMENT_1_DISCUSSION_TOPICS": [
+    "Journey from 500 to 50K Instagram followers",
+    "Instagram algorithm changes in 2026",
+    "Website design that converts visitors to clients",
+    "Email marketing for tattoo artists",
+    "Building authentic connections with your audience"
+  ],
+  "SEGMENT_1_DISCUSSION_GUIDE": "Marcus Rodriguez went from struggling to fill his appointment book to having a 6-month waitlist—all through strategic digital marketing. In this segment, we'll explore his proven framework for building an online presence that actually converts followers into paying clients.\n\nKey discussion points:\n1. The '3-Pillar System' for online growth (Instagram + Website + Email)\n2. How the 2026 Instagram algorithm favors 'engagement pods' less and authentic content more\n3. Marcus's website redesign that tripled his consultation booking rate\n4. Email sequences that keep past clients coming back (and referring friends)\n5. Common digital marketing mistakes tattoo artists make",
+
+  "SEGMENT_2_TYPE": "education",
+  "SEGMENT_2_SLIDES": [
+    {
+      "title": "Instagram Algorithm Changes in 2026",
+      "subtitle": "What Tattoo Artists Need to Know",
+      "keyPoints": [
+        "Reels now prioritize 'watch time' over likes",
+        "Carousel posts get 3x more reach than static images",
+        "Stories with interactive stickers boost engagement by 40%",
+        "Hashtags: Use 5-10 niche tags instead of 30 generic ones"
+      ],
+      "stats": [
+        {
+          "value": "3x",
+          "label": "Higher reach with carousels"
+        },
+        {
+          "value": "40%",
+          "label": "More engagement with interactive stories"
+        }
+      ],
+      "layout": "key-points",
+      "source": {
+        "type": "blog",
+        "title": "Instagram Algorithm Changes in 2026: What Tattoo Artists Need to Know",
+        "url": "https://tattoonow.com/blog/instagram-algorithm-2026",
+        "author": "Ryan Pierce"
+      }
+    },
+    {
+      "title": "The Content Trifecta for Maximum Reach",
+      "keyPoints": [
+        "🎥 Reels: Behind-the-scenes of your tattooing process (15-30 seconds)",
+        "📸 Carousels: Before/after transformations (5-10 images)",
+        "📖 Stories: Daily engagement (polls, Q&A, countdown timers)"
+      ],
+      "diagram": {
+        "type": "triangle",
+        "sections": [
+          { "label": "Reels", "percentage": 40 },
+          { "label": "Carousels", "percentage": 35 },
+          { "label": "Stories", "percentage": 25 }
+        ]
+      },
+      "layout": "diagram",
+      "source": {
+        "type": "blog",
+        "url": "https://tattoonow.com/blog/instagram-algorithm-2026"
+      }
+    },
+    {
+      "title": "Hashtag Strategy That Actually Works",
+      "subtitle": "Stop using random trending hashtags!",
+      "keyPoints": [
+        "5-10 niche hashtags > 30 generic hashtags",
+        "Mix of follower sizes: 10K, 50K, 500K+",
+        "Location-based tags for local clients",
+        "Create a branded hashtag for your studio"
+      ],
+      "stats": [
+        {
+          "value": "2.7x",
+          "label": "More bookings with niche hashtags"
+        }
+      ],
+      "layout": "key-points",
+      "source": {
+        "type": "blog",
+        "url": "https://tattoonow.com/blog/instagram-algorithm-2026"
+      }
+    },
+    {
+      "title": "Action Steps for This Week",
+      "keyPoints": [
+        "✅ Create 3 Reels showing your tattooing process",
+        "✅ Post 2 carousel before/afters",
+        "✅ Update your hashtag list (5-10 niche tags)",
+        "✅ Add interactive stickers to your Stories (polls, Q&A)",
+        "✅ Read the full blog post: tattoonow.com/blog"
+      ],
+      "layout": "checklist"
+    }
+  ],
+
+  "SEGMENT_3_TYPE": "interview",
+  "SEGMENT_3_GUEST_NAME": "Marcus Rodriguez",
+  "SEGMENT_3_GUEST_TITLE": "Digital Marketing Expert & Tattoo Artist",
+  "SEGMENT_3_GUEST_STYLE": "Neo-Traditional & Illustrative",
+  "SEGMENT_3_GUEST_LOCATION": "Austin, TX",
+  "SEGMENT_3_GUEST_INSTAGRAM": "digitalink.tattoos",
+  "SEGMENT_3_PORTFOLIO_IMAGES": [],
+  "SEGMENT_3_DISCUSSION_TOPICS": [
+    "Q&A with viewers",
+    "Marcus's website teardown (live critique)",
+    "Common pricing mistakes",
+    "Building a waitlist instead of discounting"
+  ],
+  "SEGMENT_3_DISCUSSION_GUIDE": "In the final segment, we'll open it up to live viewer questions and do a real-time website critique for one lucky attendee. Marcus will also share his pricing philosophy and how he maintains a premium brand while staying booked solid."
+}
