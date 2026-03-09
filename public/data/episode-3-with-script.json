@@ -1,0 +1,241 @@
+{
+  "EPISODE_NUMBER": 3,
+  "EPISODE_TITLE": "From Apprentice to Studio Owner",
+  "AIR_DATE": "2026-03-06T19:00:00-05:00",
+  "HOST": "Ryan Pierce",
+  "QR_CODE_URL": "https://tattoonow.com/book",
+  "QR_CODE_MESSAGE": "Book Your Free Consultation",
+
+  "SHOW_SCRIPT": [
+    {
+      "segment": "OPENING",
+      "timeCode": "0:00-0:02",
+      "title": "Title Card",
+      "type": "cue",
+      "talkingPoints": [],
+      "cue": "Display Title Card - 2 Minutes"
+    },
+    {
+      "segment": "INTRO",
+      "timeCode": "0:02-0:05",
+      "title": "Welcome & Episode Introduction",
+      "type": "intro",
+      "talkingPoints": [
+        "Welcome to TattooNOW Weekly! I'm Ryan Pierce",
+        "Tonight: From apprentice to studio owner in 5 years",
+        "Special guest: Alex Martinez from Miami Ink Collective",
+        "Topics: Apprenticeships, opening your first shop, managing artists"
+      ],
+      "notes": "Energy level: HIGH. Smile, make eye contact with camera."
+    },
+    {
+      "segment": "INTRO",
+      "timeCode": "0:05-0:07",
+      "title": "Introduce Guest: Alex Martinez",
+      "type": "intro",
+      "talkingPoints": [
+        "Alex started tattooing at age 19 under legendary artist Marco Silva",
+        "Completed 2-year apprenticeship, worked in 3 shops",
+        "Opened Miami Ink Collective in 2024 (now 8 artists)",
+        "Specializes in vibrant color realism and neo-traditional",
+        "Instagram: @alexmartinez.ink (125K followers)"
+      ],
+      "notes": "READ BIO SLOWLY. Pause for guest to wave/acknowledge audience.",
+      "cue": "Display Lower Third with guest name & Instagram"
+    },
+    {
+      "segment": "SEGMENT 1",
+      "timeCode": "0:07-0:10",
+      "title": "Guest Portfolio Showcase",
+      "type": "cue",
+      "talkingPoints": [],
+      "cue": "Display Portfolio Slides (6 images) - Alex narrates"
+    },
+    {
+      "segment": "SEGMENT 1",
+      "timeCode": "0:10-0:25",
+      "title": "Discussion: The Apprenticeship Journey",
+      "type": "discussion",
+      "talkingPoints": [
+        "\"Tell us about your apprenticeship with Marco Silva. What was that like?\"",
+        "\"What's the biggest lesson you learned during your apprenticeship?\"",
+        "\"Red flags to watch for when choosing a mentor?\"",
+        "\"Advice for artists looking for an apprenticeship today?\""
+      ],
+      "notes": "Let Alex talk! Don't interrupt. Follow up on interesting points."
+    },
+    {
+      "segment": "SEGMENT 1",
+      "timeCode": "0:25-0:27",
+      "title": "Transition to Education Segment",
+      "type": "transition",
+      "talkingPoints": [
+        "\"Alex, this is perfect timing...\"",
+        "\"We just published a blog post about finding the right apprenticeship\"",
+        "\"Let me share some key points with our audience\""
+      ],
+      "cue": "Display QR Code (Blog Post Link)"
+    },
+    {
+      "segment": "SEGMENT 2",
+      "timeCode": "0:27-0:35",
+      "title": "Education: Finding the Right Apprenticeship",
+      "type": "cue",
+      "talkingPoints": [],
+      "cue": "Display Education Slides (4 slides) - Ryan narrates"
+    },
+    {
+      "segment": "SEGMENT 2",
+      "timeCode": "0:35-0:37",
+      "title": "Transition Back to Interview",
+      "type": "transition",
+      "talkingPoints": [
+        "\"Alright, back to Alex...\"",
+        "\"You went from apprentice to studio OWNER in just 5 years\"",
+        "\"That's incredible. Let's talk about that journey.\""
+      ],
+      "cue": "Remove Education Slides, Display Lower Third"
+    },
+    {
+      "segment": "SEGMENT 3",
+      "timeCode": "0:37-0:50",
+      "title": "Discussion: Opening Your First Shop",
+      "type": "discussion",
+      "talkingPoints": [
+        "\"When did you know you were ready to open your own shop?\"",
+        "\"Walk us through the first 90 days. What was the hardest part?\"",
+        "\"How did you recruit your first artists?\"",
+        "\"Financials: How much did it cost to open? Any surprises?\"",
+        "\"Managing 8 artists now - how's that different from being solo?\""
+      ],
+      "notes": "This is the MEAT of the episode. Get specific numbers if possible."
+    },
+    {
+      "segment": "SEGMENT 3",
+      "timeCode": "0:50-0:55",
+      "title": "Rapid-Fire Q&A with Viewers",
+      "type": "discussion",
+      "talkingPoints": [
+        "\"Alright, let's open it up to viewer questions!\"",
+        "Check Twitch chat, Facebook comments, YouTube live chat",
+        "Pick 3-5 best questions",
+        "Keep answers short (1-2 minutes each)"
+      ],
+      "notes": "Prioritize questions about apprenticeships and opening shops."
+    },
+    {
+      "segment": "OUTRO",
+      "timeCode": "0:55-0:58",
+      "title": "Wrap Up & Call to Action",
+      "type": "outro",
+      "talkingPoints": [
+        "\"Alex, thank you so much for joining us tonight!\"",
+        "\"Follow Alex: @alexmartinez.ink\"",
+        "\"Visit Miami Ink Collective if you're in the area\"",
+        "\"Want to be a guest? Apply at TattooNOW.com/guest\"",
+        "\"Next week: Social media marketing with Sarah Chen\"",
+        "\"Thanks for watching TattooNOW Weekly. See you next Thursday at 7PM!\""
+      ],
+      "cue": "Display QR Code (Guest Application Form)"
+    },
+    {
+      "segment": "POST-SHOW",
+      "timeCode": "0:58-1:00",
+      "title": "End Card",
+      "type": "cue",
+      "talkingPoints": [],
+      "cue": "Display End Card with Subscribe CTA"
+    }
+  ],
+
+  "SEGMENT_1_TYPE": "interview",
+  "SEGMENT_1_GUEST_NAME": "Alex Martinez",
+  "SEGMENT_1_GUEST_TITLE": "Studio Owner & Tattoo Artist",
+  "SEGMENT_1_GUEST_STYLE": "Color Realism & Neo-Traditional",
+  "SEGMENT_1_GUEST_LOCATION": "Miami, FL",
+  "SEGMENT_1_GUEST_INSTAGRAM": "alexmartinez.ink",
+  "SEGMENT_1_PORTFOLIO_IMAGES": [
+    {
+      "url": "https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?w=800",
+      "description": "Vibrant floral sleeve"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1598961942677-86574e2049c4?w=800",
+      "description": "Neo-traditional eagle"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1562962230-16a66e891c64?w=800",
+      "description": "Color realism portrait"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?w=800",
+      "description": "Japanese koi half-sleeve"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1616164744055-63e1b3a6e5c6?w=800",
+      "description": "Bold traditional panther"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1590246814883-57c511a59f90?w=800",
+      "description": "Geometric mandala chest piece"
+    }
+  ],
+
+  "SEGMENT_2_TYPE": "education",
+  "SEGMENT_2_SLIDES": [
+    {
+      "title": "Finding the Right Apprenticeship",
+      "subtitle": "Your First Step Into Professional Tattooing",
+      "keyPoints": [
+        "Research shops in your area (3-6 month process)",
+        "Look for licensed, experienced mentors (10+ years)",
+        "Expect 1-3 year commitment (unpaid or low pay)",
+        "Portfolio required: 50+ drawings in tattoo style"
+      ],
+      "stats": [
+        {
+          "value": "2 years",
+          "label": "Average apprenticeship length"
+        }
+      ],
+      "layout": "key-points"
+    },
+    {
+      "title": "Red Flags to Avoid",
+      "keyPoints": [
+        "🚩 Mentor asks for upfront payment (should be free or trade work)",
+        "🚩 No formal training structure or curriculum",
+        "🚩 Pressure to tattoo clients before you're ready",
+        "🚩 Unsafe practices or lack of health certifications"
+      ],
+      "layout": "key-points"
+    },
+    {
+      "title": "What to Expect During Your Apprenticeship",
+      "keyPoints": [
+        "Year 1: Cleaning, observing, practicing on fake skin",
+        "Year 2: Assisting, tattooing friends/family, building portfolio",
+        "Daily: Shop cleaning, sterilization, customer service",
+        "Weekends: Drawing, studying, attending conventions"
+      ],
+      "stats": [
+        {
+          "value": "60-80",
+          "label": "Hours per week (including practice)"
+        }
+      ],
+      "layout": "key-points"
+    },
+    {
+      "title": "Action Steps: Getting Started",
+      "keyPoints": [
+        "✅ Build a drawing portfolio (50+ pieces)",
+        "✅ Visit 5+ local shops, observe the culture",
+        "✅ Take bloodborne pathogens certification course",
+        "✅ Practice on fake skin (invest in equipment)",
+        "✅ Follow apprenticeship hashtags on Instagram"
+      ],
+      "layout": "checklist"
+    }
+  ]
+}
