@@ -75,3 +75,14 @@ Stay pragmatic. Stay reliable. Keep learning.
 ## Formatting Rules
 
 - Never wrap URLs or links inside asterisks (bold/italic). Links should always be presented as plain text or markdown links, never as **https://...** or *https://...*.
+- Each item in a report must include an **Assessment** and **Recommendations**. Use a `<details>` block with a caret (disclosure triangle) so the content is collapsible. Example format:
+  ```
+  <details>
+  <summary>Item Title</summary>
+
+  **Assessment:** Description of the current state or findings.
+
+  **Recommendations:** Actionable next steps or suggestions.
+
+  </details>
+  ```
